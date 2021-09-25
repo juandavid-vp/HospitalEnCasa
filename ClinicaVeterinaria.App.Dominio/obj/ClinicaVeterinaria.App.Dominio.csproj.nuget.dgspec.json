@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj": {}
+    "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj": {
+    "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj",
         "projectName": "ClinicaVeterinaria.App.Dominio",
-        "projectPath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj",
+        "projectPath": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-        "outputPath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config"

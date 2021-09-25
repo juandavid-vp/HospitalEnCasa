@@ -66,3 +66,5 @@ C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Consola\bin\
 C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Consola\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Consola\bin\Debug\netcoreapp3.1\ClinicaVeterinaria.App.Persistencia.dll
 C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Consola\bin\Debug\netcoreapp3.1\ClinicaVeterinaria.App.Persistencia.pdb
+C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Consola\obj\Debug\netcoreapp3.1\ClinicaVeterinaria.App.Consola.dll
+C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Consola\obj\Debug\netcoreapp3.1\ClinicaVeterinaria.App.Consola.pdb
