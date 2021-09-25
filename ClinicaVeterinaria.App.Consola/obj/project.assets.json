@@ -5796,19 +5796,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Adrian\\.nuget\\packages\\": {}
+    "C:\\Users\\ya-ke\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Consola\\ClinicaVeterinaria.App.Consola.csproj",
+      "projectUniqueName": "C:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.Consola\\ClinicaVeterinaria.App.Consola.csproj",
       "projectName": "ClinicaVeterinaria.App.Consola",
-      "projectPath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Consola\\ClinicaVeterinaria.App.Consola.csproj",
-      "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-      "outputPath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Consola\\obj\\",
+      "projectPath": "C:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.Consola\\ClinicaVeterinaria.App.Consola.csproj",
+      "packagesPath": "C:\\Users\\ya-ke\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.Consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ya-ke\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5819,8 +5819,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj": {
-              "projectPath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj"
+            "C:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj": {
+              "projectPath": "C:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj"
             }
           }
         }
