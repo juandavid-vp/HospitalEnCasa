@@ -1,6 +1,6 @@
 using System;
 
-namespace CliniVeteriVethouse.App.Dominio
+namespace ClinicaVeterinaria.App.Dominio
 {
     public class Agenda : HorarioAtencion
     {
