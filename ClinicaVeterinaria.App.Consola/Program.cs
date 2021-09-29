@@ -11,6 +11,7 @@ namespace ClinicaVeterinaria.App.Consola
 
         private static IRepositorioVeterinario _repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
 
+        private static IRepositorioAuxiliar _repoAuxiliar = new RepositorioAuxiliar(new Persistencia.AppContext());
 
         static void Main(string[] args)
         {
@@ -50,21 +51,21 @@ namespace ClinicaVeterinaria.App.Consola
         
         private static void UpdateOwner()
         {
-            var veterinarioEncontrado = new Owner
+            var auxiliarEncontrado = new Owner
             {
-                veterinarioEncontrado.Nombre = "Niu user",
-                veterinarioEncontrado.Ciudad = "Manizales",
-                veterinarioEncontrado.NumeroTelefono = "3122222222",
-                veterinarioEncontrado.CorreoElectronico = "Niumani@usurio.es",
-                veterinarioEncontrado.Direccion = "Calle 4 # 33B-12 SUR"
+                auxiliarEncontrado.Nombre = "Niu user",
+                auxiliarEncontrado.Ciudad = "Manizales",
+                auxiliarEncontrado.NumeroTelefono = "3122222222",
+                auxiliarEncontrado.CorreoElectronico = "Niumani@usurio.es",
+                auxiliarEncontrado.Direccion = "Calle 4 # 33B-12 SUR"
             };
-            _repoOwner.UpdateOwner(veterinarioEncontrado);
+            _repoOwner.UpdateOwner(auxiliarEncontrado);
             Console.WriteLine("Propietario actualizado correctamente.");
         }    
 
         private static void DeleteOwner(int idOwner)
         {
-            var veterinarioEncontrado = _repoOwner.GetOwner(idOwner);
+            var auxiliarEncontrado = _repoOwner.GetOwner(idOwner);
             _repoOwner.DeleteOwner(idOwner);
             Console.WriteLine("La eliminacion fue exitosa");
             return;
@@ -97,25 +98,85 @@ namespace ClinicaVeterinaria.App.Consola
 
         private static void DeleteVeterinario(int idVeterinario)
         {
-            var veterinarioEncontrado = _repoVeterinario.GetVeterinario(idVeterinario);
+            var auxiliarEncontrado = _repoVeterinario.GetVeterinario(idVeterinario);
             _repoVeterinario.DeleteVeterinario(idVeterinario);
             Console.WriteLine("La eliminacion fue exitosa");
             return;
+        }
+
+         private static void GetAllVeterinarios()
+        {
+            _repoVeterinario.GetAllVeterinarios();
+            Console.WriteLine(GetAllVeterinarios);
         }
         
         
         private static void UpdateVeterinario()
         {
-        var veterinarioEncontrado = new Veterinario
+        var auxiliarEncontrado = new Veterinario
         {
-            veterinarioEncontrado.Nombre = "Estefan Medina",
-            veterinarioEncontrado.Ciudad = "Cucuta",
-            veterinarioEncontrado.NumeroTelefono = "313333333",
-            veterinarioEncontrado.CorreoElectronico = "Program@Gret.Mintic",
-            veterinarioEncontrado.Direccion = "Calle 5 #13-31"
+            auxiliarEncontrado.Nombre = "Estefan Medina",
+            auxiliarEncontrado.Ciudad = "Cucuta",
+            auxiliarEncontrado.NumeroTelefono = "313333333",
+            auxiliarEncontrado.CorreoElectronico = "Program@Gret.Mintic",
+            auxiliarEncontrado.Direccion = "Calle 5 #13-31"
         };
-            _repoOwner.UpdateOwner(veterinarioEncontrado);
+            _repoOwner.UpdateOwner(auxiliarEncontrado);
+            Console.WriteLine("Veterinario actualizado correctamente.");
+        }
+
+
+        private static void AddAuxiliar()
+        {
+            var auxiliar = new Auxiliar
+            {
+                Nombre = "Camilo andrade",
+                CorreoElectronico = "Camilo@FirtsAux.com",
+                NumeroTelefono = "3114445555",
+                HorarioLaboral = new DateTime(),
+            };
+                _repoAuxiliar.AddAuxiliar(auxiliar);
+                Console.WriteLine("Auxiliar añadido exitosamente");
+        }
+ 
+ 
+        private static void BuscarAuxiliar(int idAuxiliar)
+        {
+            var auxiliar= _repoAuxiliar.GetAuxiliar(idAuxiliar);
+            Console.WriteLine("El auxiliar que usted busca es: \n");
+            Console.WriteLine(auxiliar.Nombre + " y su estatus es: " + auxiliar.EstadoVeterinario);
+        }
+
+
+        private static void DeleteAuxiliar(int idAuxiliar)
+        {
+            var auxiliarEncontrado = _repoAuxiliar.GetAuxiliar(idAuxiliar);
+            _repoAuxiliar.DeleteAuxiliar(idAuxiliar);
+            Console.WriteLine("La eliminacion fue exitosa");
+            return;
+        }
+        
+
+         private static void GetAllAuxiliares()
+        {
+            _repoOwner.GetAllAuxiliares();
+            Console.WriteLine(GetAllAuxiliares);
+        }
+
+        
+        private static void UpdateAuxiliar()
+        {
+        var auxiliarEncontrado = new Auxiliar
+        {
+            auxiliarEncontrado.Nombre = "Estefan Medina",
+            auxiliarEncontrado.NumeroTelefono = "313333333",
+            auxiliarEncontrado.CorreoElectronico = "Program@Gret.Mintic",
+            auxiliarEncontrado.HorarioLaboral = new DateTime(),
+            auxiliarEncontrado.FechaNacimiento = new DateTime (2002, 03, 10)
+        };
+            _repoAuxiliar.UpdateAuxiliar(auxiliarEncontrado);
             Console.WriteLine("Veterinario actualizado correctamente.");
         }    
+    }    
     }
 }
