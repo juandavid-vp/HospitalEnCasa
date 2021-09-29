@@ -8,7 +8,6 @@ namespace ClinicaVeterinaria.App.Dominio
         public Persona Persona { get; set; }
         public Veterinario Veterinario { get; set; }
         public Auxiliar Auxiliar { get; set; }
-
-
-
+        public Veterinario veterinario { get; set; }
+        
     }
