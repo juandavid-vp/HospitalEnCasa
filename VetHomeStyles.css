@@ -1,0 +1,97 @@
+@font-face {
+    font-family: MontseratLight;
+    src: url(Fuentes/Montserrat/Montserrat-Light.ttf);
+}
+
+:root {
+    --blue: #58a0c4;
+    --red: #ff725e;
+    --orange: #ff974b;
+    --white: #F5F5F4;
+    --salmon: #f29ea4;
+    --black: #263238;
+  }
+  
+
+
+/*Creacion de panel de Menu incial*/
+
+.menu{
+    width: 100%; /*Tamaño*/
+    top: 0px; 
+    left: 0px; /*Para que quede al limite con la pagina*/
+    position: fixed; /*Para que sea fijo el elemento 
+    en este caso el div de menu*/
+     /* Para suporponer imagenes por ejemplo 
+    colocar una encima de otra o viceversa*/
+    background-color: #fff; 
+    box-shadow: 4px 4px 20px 4px rgba(184, 184, 184, 0.31);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+/*Creacion del subpanel con las subpaginas*/
+.menutotal{
+    max-width: 1366px; 
+    /*La propiedad de CSS max-width 
+    coloca el máximo ancho a un elemento. Además, 
+    impide que el valor de width sea más largo que 
+    el valor especificado en max-width .
+    */
+    margin: auto;
+    display: flex; /*La propiedad de display flex, 
+    ayuda a colocar las cajas como si fueran celdas 
+    de tablas http://www.mywonderland.es/curso_js/HTML/flex.html*/
+    align-items: center; /* permite alienar cada ítem en el eje
+    eje vertical*/
+    justify-content: space-between; /* Permite alinear cada ítem
+    en el eje horizontal*/
+    padding: 1em;
+}
+
+.subpages{
+    /*Video introductorio de justify-content
+    y align-items https://www.youtube.com/watch?v=UybQr-QKTe4&t=180s*/
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+/*Logo*/
+.logoprofile{
+    width: 100px;
+}
+
+.subpaginas {
+    font-family: MontseratLight;
+    color: var(--black);
+    font-weight: 600;
+    margin-left: 1em;
+    padding: .5rem 1.5rem;
+    cursor: pointer; /*Permite hacer interaccion con el objeto*/
+    transition: .3s ease-in-out; /*Declaracion de la transicion*/
+    
+  }
+  /*Especificacion de la transicion*/
+.subpaginas:hover {
+    color: var(--red);
+    transition: .3s ease-in-out;
+    letter-spacing: 2px;
+  }
+
+.hamburguer-menu {
+    color: var(--black);
+    font-size: 2rem;
+    margin-left: 1em;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.hamburguer-menu:hover{
+    color: var(--red);
+    transition: .3s ease-in-out;
+}
+
+
