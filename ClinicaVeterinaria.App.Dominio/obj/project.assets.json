@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj",
+      "projectUniqueName": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj",
       "projectName": "ClinicaVeterinaria.App.Dominio",
-      "projectPath": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj",
+      "projectPath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj",
       "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Dominio\\obj\\",
+      "outputPath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config"

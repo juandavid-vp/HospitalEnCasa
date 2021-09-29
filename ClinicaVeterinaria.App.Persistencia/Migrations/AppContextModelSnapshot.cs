@@ -19,12 +19,30 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Mascota", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Mascotas");
+                });
+
             modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Persona", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
+
+                    b.Property<string>("CorreoElectronico")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Discriminator")
                         .IsRequired()
@@ -36,7 +54,7 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Telefono")
+                    b.Property<string>("NumeroTelefono")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -46,7 +64,17 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.HasDiscriminator<string>("Discriminator").HasValue("Persona");
                 });
 
-            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Dueño", b =>
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Auxiliar", b =>
+                {
+                    b.HasBaseType("ClinicaVeterinaria.App.Dominio.Persona");
+
+                    b.Property<DateTime>("HorarioLaboral")
+                        .HasColumnType("datetime2");
+
+                    b.HasDiscriminator().HasValue("Auxiliar");
+                });
+
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Owner", b =>
                 {
                     b.HasBaseType("ClinicaVeterinaria.App.Dominio.Persona");
 
@@ -56,24 +84,19 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("EstadoDueño")
-                        .HasColumnType("int");
-
-                    b.HasDiscriminator().HasValue("Dueño");
+                    b.HasDiscriminator().HasValue("Owner");
                 });
 
             modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Veterinario", b =>
                 {
                     b.HasBaseType("ClinicaVeterinaria.App.Dominio.Persona");
 
-                    b.Property<string>("Especializacion")
+                    b.Property<string>("EstadoVeterinario")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("EstadoVeterinario")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("HorarioLaboral")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime2")
+                        .HasColumnName("Veterinario_HorarioLaboral");
 
                     b.Property<string>("LicenciaProfesional")
                         .HasColumnType("nvarchar(max)");

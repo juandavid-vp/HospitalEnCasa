@@ -5801,11 +5801,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Consola\\ClinicaVeterinaria.App.Consola.csproj",
+      "projectUniqueName": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Consola\\ClinicaVeterinaria.App.Consola.csproj",
       "projectName": "ClinicaVeterinaria.App.Consola",
-      "projectPath": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Consola\\ClinicaVeterinaria.App.Consola.csproj",
+      "projectPath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Consola\\ClinicaVeterinaria.App.Consola.csproj",
       "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Consola\\obj\\",
+      "outputPath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5819,8 +5819,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj": {
-              "projectPath": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj"
+            "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj": {
+              "projectPath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj"
             }
           }
         }

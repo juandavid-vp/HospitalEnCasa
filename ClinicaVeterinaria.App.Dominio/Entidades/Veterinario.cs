@@ -6,8 +6,8 @@ namespace ClinicaVeterinaria.App.Dominio
     {
         public DateTime HorarioLaboral{get; set;}
         public string LicenciaProfesional{get; set;}
-        public string Especializacion{get; set;}
-        public int EstadoVeterinario{get; set;}
+        public string EstadoVeterinario{get; set;}
     }
+
 
 }

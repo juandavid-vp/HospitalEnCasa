@@ -7,9 +7,3 @@ C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Dominio\obj\
 C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.csproj.CoreCompileInputs.cache
 C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.dll
 C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.pdb
-C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.csprojAssemblyReference.cache
-C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.AssemblyInfoInputs.cache
-C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.AssemblyInfo.cs
-C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.csproj.CoreCompileInputs.cache
-C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.dll
-C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.pdb
