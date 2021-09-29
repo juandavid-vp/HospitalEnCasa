@@ -23,10 +23,10 @@ namespace ClinicaVeterinaria.App.Consola
         {
             var owner = new Owner
             {
-                Nombre = "Laura Sofia Murillo",
+                Nombre = "Camila Delgado",
                 Ciudad = "Bogota",
-                Direccion = "Subayork",
-                CorreoElectronico = "Amordemivida@Mitesoro.com",
+                Direccion = "Avcalle 2# 23-34",
+                CorreoElectronico = "emprende@ahora.es",
                 FechaNacimiento = new DateTime(1901, 01, 11),
 
             };
