@@ -17,8 +17,7 @@
     text-decoration: none;
   }
 
-/*Creacion de panel de Menu incial*/
-
+/*Nav*/
 .menu{
     width: 100%; /*Tamaño*/
     top: 0px; 
@@ -32,8 +31,7 @@
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
-
-/*Creacion del subpanel con las subpaginas*/
+/*Panel*/
 .menutotal{
     max-width: 1366px; 
     /*La propiedad de CSS max-width 
@@ -51,7 +49,7 @@
     en el eje horizontal*/
     padding: 1em;
 }
-
+/*Display*/
 .subpages{
     /*Video introductorio de justify-content
     y align-items https://www.youtube.com/watch?v=UybQr-QKTe4&t=180s*/
@@ -60,12 +58,11 @@
     justify-content: center;
     margin-left: auto;
 }
-
-/*Logo*/
+/*Imagotipo*/
 .logoprofile{
     width: 100px;
 }
-
+/*Menu Lateral*/
 .subpaginas {
     font-family: MontseratLight;
     text-shadow: 4px 4px 20px 4px rgba(121, 121, 121, 0.31);
@@ -86,7 +83,7 @@
     opacity: 60%;
     letter-spacing: 2px;
   }
-
+/*Menu Hamburguesa*/
 .hamburguer-menu {
     color: var(--black);
     font-size: 2rem;
@@ -95,14 +92,14 @@
     cursor: pointer;
     transition: .3s ease-in-out;
 }
-
+/*Especificaciones de la transicion*/
 .hamburguer-menu:hover{
     color: var(--salmon);
     transition: .3s ease-in-out;
 }
 
-/* Primera Seccion */
 
+/*Home*/
 .seccion1{
     height: 100%;
     padding-top: 85px;
@@ -111,30 +108,22 @@
     justify-content: center;
 
 }
-
+/*Isotipo Display*/
 .imagen{
     display: flex;
     align-items: flex-end;
     justify-content: right;
 }
-
+/*Configuración de Isotipo*/
 .imagen-inicio{
-    width: 85%;
+    width: 100%;
     margin-top: 2em;
 }
-
-.info{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-}
-
+/*Logotipo*/
 .tipografia{
-    
     width: 100%;
 }
-
+/*Texto*/
 p {
     font-family: MontseratLight;
     text-shadow: 4px 4px 20px 4px rgba(104, 104, 104, 0.31);
@@ -148,7 +137,13 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-
+/*Display de Botones de Log in y Sign up*/
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/*Botones de Log in y Sign up*/
 button{
     width: 30%;
     outline: none;
@@ -163,19 +158,14 @@ button{
     transition: .5s ease-in-out;
     
 }
-
+/*Animación de botones*/
 button:hover {
     background-color: var(--orange);
     letter-spacing: 5px;
     transition: .3s ease-in-out;
   }
 
-.buttons{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
+/*Circulos*/
 .circle{
     display: flex;
     align-items: center;
