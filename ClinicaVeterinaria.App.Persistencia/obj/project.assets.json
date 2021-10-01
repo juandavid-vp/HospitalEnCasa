@@ -7263,19 +7263,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Adrian\\.nuget\\packages\\": {}
+    "C:\\Users\\ya-ke\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj",
+      "projectUniqueName": "C:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj",
       "projectName": "ClinicaVeterinaria.App.Persistencia",
-      "projectPath": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj",
-      "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Persistencia\\obj\\",
+      "projectPath": "C:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj",
+      "packagesPath": "C:\\Users\\ya-ke\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ya-ke\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -7285,9 +7285,10 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj": {
-              "projectPath": "C:\\Users\\Adrian\\Documents\\GitHub\\VetHome\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj"
+            "C:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj": {
+              "projectPath": "C:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj"
             }
           }
         }
@@ -7300,6 +7301,7 @@
     },
     "frameworks": {
       "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -7337,7 +7339,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

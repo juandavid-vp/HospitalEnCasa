@@ -12,3 +12,5 @@ C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Persistencia
 C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.pdb
 C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.dll
 C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.pdb
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.dll
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.pdb

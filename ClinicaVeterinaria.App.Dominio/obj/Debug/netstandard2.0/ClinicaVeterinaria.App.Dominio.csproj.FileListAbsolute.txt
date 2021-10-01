@@ -13,3 +13,10 @@ C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Dominio\obj\Debu
 C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.dll
 C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.pdb
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.csproj.AssemblyReference.cache
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.AssemblyInfo.cs
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.dll
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.pdb
