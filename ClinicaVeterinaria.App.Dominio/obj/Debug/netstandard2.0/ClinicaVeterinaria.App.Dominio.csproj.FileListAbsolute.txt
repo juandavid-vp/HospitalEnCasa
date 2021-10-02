@@ -20,3 +20,6 @@ C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Domini
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.dll
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.pdb
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\bin\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.deps.json
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\bin\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.dll
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\bin\Debug\netstandard2.0\ClinicaVeterinaria.App.Dominio.pdb

@@ -14,3 +14,8 @@ C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Persistencia\obj
 C:\Users\Adrian\Documents\GitHub\VetHome\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.pdb
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.dll
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.pdb
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.csproj.AssemblyReference.cache
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.AssemblyInfoInputs.cache
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.AssemblyInfo.cs
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.csproj.CoreCompileInputs.cache

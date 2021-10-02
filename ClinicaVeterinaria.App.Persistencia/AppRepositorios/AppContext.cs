@@ -23,8 +23,11 @@ namespace ClinicaVeterinaria.App.Persistencia
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Persona>()
-                .HasIndex(u => u.cedula)
+            /*builder.Entity<Persona>()
+                .HasIndex(u => u.Cedula)
+                .IsUnique();*/
+            builder.Entity<Mascota>()
+                .HasIndex(u => u.IdMascota)
                 .IsUnique();
         }
     }
