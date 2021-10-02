@@ -14,6 +14,8 @@ namespace ClinicaVeterinaria.App.Persistencia
         public Mascota addMascotas(Mascota mascota)
         {
             Mascota newMascota = _appContext.Add(mascota).Entity;
+            _appContext.SaveChanges();
+            return newMascota;
         }
 
         public Mascota editMascotas(Mascota mascota)
@@ -23,17 +25,24 @@ namespace ClinicaVeterinaria.App.Persistencia
 
         public IEnumerable<Mascota> getAllMascotas()
         {
-            throw new System.NotImplementedException();
+            return _appContext.Mascotas;
         }
 
         public Mascota getMascotas(int IdMascota)
         {
-            throw new System.NotImplementedException();
+            Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.IdMascota == IdMascota);
+            return mascotaEncontrado;
         }
 
-        public void removeMascotas(Mascota mascota)
+        public void removeMascotas(int IdMascota)
         {
-            throw new System.NotImplementedException();
+            Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.IdMascota == IdMascota);
+            if(mascotaEncontrado != null)
+            {
+                _appContext.Mascotas.Remove(mascotaEncontrado);
+                _appContext.SaveChanges();
+            }
+
         }
     }
 }

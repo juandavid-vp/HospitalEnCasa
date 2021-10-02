@@ -11,7 +11,7 @@ namespace ClinicaVeterinaria.App.Dominio
         Mascota getMascotas(int IdMascota);
         Mascota addMascotas(Mascota mascota);
         Mascota editMascotas(Mascota mascota);
-        void removeMascotas(Mascota mascota);
+        void removeMascotas(int IdMascota);
 
     }
 }

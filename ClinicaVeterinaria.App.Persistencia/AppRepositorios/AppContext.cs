@@ -12,7 +12,8 @@ namespace ClinicaVeterinaria.App.Persistencia
         public DbSet<Veterinario> Veterinarios{get; set;}
         public DbSet<Auxiliar> Auxiliares{get; set;}
         public DbSet<Mascota> Mascotas{get; set;}
-        
+        public DbSet<HistoriaClinica>historiaClinicas{get; set;}
+        public DbSet<>        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
