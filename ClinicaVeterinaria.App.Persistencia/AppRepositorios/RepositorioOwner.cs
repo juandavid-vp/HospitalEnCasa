@@ -29,7 +29,7 @@ namespace ClinicaVeterinaria.App.Persistencia
         }
         public void DeleteOwner(int idOwner)
         {
-            var ownerEncontrado=_appContext.Owners.FirstOrDefault(p => p.Id==idOwner);
+            var ownerEncontrado=_appContext.Owners.FirstOrDefault(o => o.Id==idOwner);
             if(ownerEncontrado==null)
             return;
             _appContext.Owners.Remove(ownerEncontrado);
@@ -41,11 +41,11 @@ namespace ClinicaVeterinaria.App.Persistencia
         }
         public Owner GetOwner(int idOwner)
         {
-            return _appContext.Owners.FirstOrDefault(p => p.Id==idOwner);
+            return _appContext.Owners.FirstOrDefault(o => o.Id==idOwner);
         }
         public Owner UpdateOwner(Owner owner)
         {
-        var ownerEncontrado=_appContext.Owners.FirstOrDefault(p => p.Id == owner.Id);
+        var ownerEncontrado=_appContext.Owners.FirstOrDefault(o => o.Id == owner.Id);
             if(ownerEncontrado!=null)
             {
                 ownerEncontrado.Nombre=owner.Nombre;
