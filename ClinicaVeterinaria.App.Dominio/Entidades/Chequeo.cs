@@ -3,7 +3,7 @@ using System;
 namespace ClinicaVeterinaria.App.Dominio
 {
 
-    public class Chequeo : Mascota
+    public class Chequeo
     {
         public int Pulso { get; set; }
         public int PresionArterial { get; set; }
@@ -12,8 +12,8 @@ namespace ClinicaVeterinaria.App.Dominio
         public String Temperatura { get; set; }
         public String Observaciones { get; set; }
         //public Veterinario veterinario { get; set; }
-        public String Auxiliar { get; set; }
-        public Anotacion anotacion { get; set; }
+       // public String Auxiliar { get; set; }
+        //public Anotacion anotacion { get; set; }
         
     }
 }

@@ -2,7 +2,7 @@ using System;
 
 namespace ClinicaVeterinaria.App.Dominio
 {
-    public class Mascota : Owner
+    public class Mascota 
     {
         public int IdMascota { get; set; }
         public string NombreM {get; set;}
@@ -11,7 +11,7 @@ namespace ClinicaVeterinaria.App.Dominio
         public String Especie { get; set; }
         public String Color { get; set; }
         public String Descripción { get; set; }
-        public Veterinario veterinario { get; set; }
+       // public Veterinario veterinario { get; set; }
        // public Auxiliar auxiliar { get; set; }
         
 
