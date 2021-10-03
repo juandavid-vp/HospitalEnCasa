@@ -8,7 +8,8 @@ namespace ClinicaVeterinaria.App.Dominio
         public string Nombre{get; set;}
         public int Cedula{get; set;}
         public DateTime FechaNacimiento {get; set;}
-        public string Telefono {get; set;}
+        public string NumeroTelefono {get; set;}
+        public string CorreoElectronico {get; set;}
         
     }
 

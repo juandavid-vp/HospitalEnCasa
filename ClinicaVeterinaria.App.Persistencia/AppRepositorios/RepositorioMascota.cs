@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using ClinicaVeterinaria.App.Dominio;
-
+using System.Linq;
 
 namespace ClinicaVeterinaria.App.Persistencia
 {
@@ -20,7 +20,18 @@ namespace ClinicaVeterinaria.App.Persistencia
 
         public Mascota editMascotas(Mascota mascota)
         {
-            throw new System.NotImplementedException();
+             Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.IdMascota == mascota.IdMascota);
+            if (mascotaEncontrado != null)
+            {
+                mascotaEncontrado.IdMascota = mascota.IdMascota;
+                mascotaEncontrado.Nacimiento = mascota.Nacimiento;
+                mascotaEncontrado.Peso = mascota.Peso;
+                mascotaEncontrado.Especie = mascota.Especie;
+                mascotaEncontrado.Color = mascota.Color;
+                mascotaEncontrado.Descripción = mascota.Descripción;
+                _appContext.SaveChanges();
+            }
+            return mascotaEncontrado;
         }
 
         public IEnumerable<Mascota> getAllMascotas()
