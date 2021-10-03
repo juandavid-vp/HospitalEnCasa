@@ -7,7 +7,7 @@ namespace ClinicaVeterinaria.App.Dominio
     {
         public Anotacion anotacion { get; set; }
         public Dueño  Dueño { get; set; }
-        public Veterinario veterinario { get; set; }
-        public Auxiliar  auxiliar { get; set; }
+        //public Veterinario veterinario { get; set; }
+        //public Auxiliar  auxiliar { get; set; }
     }
 }
