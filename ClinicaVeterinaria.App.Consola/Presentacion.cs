@@ -5,7 +5,7 @@ using ClinicaVeterinaria.App.Persistencia;
 
 namespace ClinicaVeterinaria.App.Consola
 {
-    class Program
+    class Presentacion
     {
         private static IRepositorioOwner _repoOwner = new RepositorioOwner(new Persistencia.AppContext());
 
