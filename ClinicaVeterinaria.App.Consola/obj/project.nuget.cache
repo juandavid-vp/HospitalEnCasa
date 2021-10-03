@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ERrK+60NBGK4fH4DJsnZ99vuXi0hCGBMhriG8NFTclIlVUXSp++jez8MxqbCAc+8kUt1muRvZlkdJBPUckRP2Q==",
+  "dgSpecHash": "UoSqi/dQrxRNY74V85M5f3BUWHmecR7qXwVMSWUOkU7prbF0HI0yadlaw3cB5TGQ6HVaBMRXnEmhH+wNushT9w==",
   "success": true,
-  "projectFilePath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Consola\\ClinicaVeterinaria.App.Consola.csproj",
+  "projectFilePath": "C:\\DonAmeroIndustry\\VetHome\\ClinicaVeterinaria.App.Consola\\ClinicaVeterinaria.App.Consola.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Adrian\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

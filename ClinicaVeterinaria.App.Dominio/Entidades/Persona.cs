@@ -9,6 +9,9 @@ namespace ClinicaVeterinaria.App.Dominio
         public DateTime FechaNacimiento {get; set;}
         public string NumeroTelefono {get; set;}
         public string CorreoElectronico {get; set;}
+        public int NumeroIdentificacion {get; set;}
+        public string UserName {get; set;}
+        public string PassWord {get; set;}
         
     }
 

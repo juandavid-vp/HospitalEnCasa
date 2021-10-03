@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ClinicaVeterinaria.App.Dominio;
 
+
 namespace ClinicaVeterinaria.App.Persistencia
 {
     public class RepositorioOwner : IRepositorioOwner
@@ -54,7 +55,10 @@ namespace ClinicaVeterinaria.App.Persistencia
                 ownerEncontrado.Direccion=owner.Direccion;
                 ownerEncontrado.NumeroTelefono=owner.NumeroTelefono;
                 ownerEncontrado.FechaNacimiento=owner.FechaNacimiento;
-               
+                ownerEncontrado.UserName=owner.UserName;
+                ownerEncontrado.PassWord=owner.PassWord;
+                ownerEncontrado.NumeroIdentificacion=owner.NumeroIdentificacion;
+                ownerEncontrado.EstadoDueño=owner.EstadoDueño;
 
                 _appContext.SaveChanges();
             }

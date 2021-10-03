@@ -1,10 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using ClinicaVeterinaria.App.Dominio;
 
-namespace ClinicaVeterinaria.App.Persistencia.AppRepositorios
+namespace ClinicaVeterinaria.App.Persistencia
 {
     public class RepositorioVeterinario : IRepositorioVeterinario
     {
@@ -56,7 +54,10 @@ namespace ClinicaVeterinaria.App.Persistencia.AppRepositorios
                 veterinarioEncontrado.FechaNacimiento=veterinario.FechaNacimiento;
                 veterinarioEncontrado.HorarioLaboral=veterinario.HorarioLaboral;
                 veterinarioEncontrado.EstadoVeterinario=veterinario.EstadoVeterinario;
-               
+                veterinarioEncontrado.NumeroIdentificacion=veterinario.NumeroIdentificacion;
+                veterinarioEncontrado.UserName=veterinario.UserName;
+                veterinarioEncontrado.PassWord=veterinario.PassWord;
+                veterinarioEncontrado.LicenciaProfesional=veterinario.LicenciaProfesional;
 
                 _appContext.SaveChanges();
             }

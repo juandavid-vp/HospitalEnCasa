@@ -7268,11 +7268,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj",
+      "projectUniqueName": "C:\\DonAmeroIndustry\\VetHome\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj",
       "projectName": "ClinicaVeterinaria.App.Persistencia",
-      "projectPath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj",
+      "projectPath": "C:\\DonAmeroIndustry\\VetHome\\ClinicaVeterinaria.App.Persistencia\\ClinicaVeterinaria.App.Persistencia.csproj",
       "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-      "outputPath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Persistencia\\obj\\",
+      "outputPath": "C:\\DonAmeroIndustry\\VetHome\\ClinicaVeterinaria.App.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -7286,8 +7286,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj": {
-              "projectPath": "C:\\ClinicaVeterinaria\\ClinicaVeterinaria.App\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj"
+            "C:\\DonAmeroIndustry\\VetHome\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj": {
+              "projectPath": "C:\\DonAmeroIndustry\\VetHome\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj"
             }
           }
         }

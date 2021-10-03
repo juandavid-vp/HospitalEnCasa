@@ -54,7 +54,16 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("NumeroIdentificacion")
+                        .HasColumnType("int");
+
                     b.Property<string>("NumeroTelefono")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PassWord")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -67,6 +76,9 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
             modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Auxiliar", b =>
                 {
                     b.HasBaseType("ClinicaVeterinaria.App.Dominio.Persona");
+
+                    b.Property<string>("EstadoAuxiliar")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("HorarioLaboral")
                         .HasColumnType("datetime2");
@@ -82,6 +94,9 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Direccion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EstadoDueño")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("Owner");

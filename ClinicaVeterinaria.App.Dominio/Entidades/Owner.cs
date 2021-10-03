@@ -6,7 +6,7 @@ namespace ClinicaVeterinaria.App.Dominio
     {
         public string Direccion {get; set;}
         public string Ciudad {get; set;}
-        
-        
+        public string EstadoDueño {get; set;}
+ 
     }
 }

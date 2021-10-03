@@ -10,3 +10,15 @@ C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Persistencia
 C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.csproj.CopyComplete
 C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.dll
 C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.pdb
+C:\DonAmeroIndustry\VetHome\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.csprojAssemblyReference.cache
+C:\DonAmeroIndustry\VetHome\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.AssemblyInfoInputs.cache
+C:\DonAmeroIndustry\VetHome\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.AssemblyInfo.cs
+C:\DonAmeroIndustry\VetHome\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\DonAmeroIndustry\VetHome\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.dll
+C:\DonAmeroIndustry\VetHome\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.pdb
+C:\DonAmeroIndustry\VetHome\ClinicaVeterinaria.App.Persistencia\bin\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.deps.json
+C:\DonAmeroIndustry\VetHome\ClinicaVeterinaria.App.Persistencia\bin\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.dll
+C:\DonAmeroIndustry\VetHome\ClinicaVeterinaria.App.Persistencia\bin\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.pdb
+C:\DonAmeroIndustry\VetHome\ClinicaVeterinaria.App.Persistencia\bin\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.dll
+C:\DonAmeroIndustry\VetHome\ClinicaVeterinaria.App.Persistencia\bin\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.pdb
+C:\DonAmeroIndustry\VetHome\ClinicaVeterinaria.App.Persistencia\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Persistencia.csproj.CopyComplete
