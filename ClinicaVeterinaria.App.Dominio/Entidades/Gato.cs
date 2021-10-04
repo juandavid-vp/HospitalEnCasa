@@ -7,11 +7,7 @@ namespace ClinicaVeterinaria.App.Dominio
 {
     public class Gato : Mascota
     {
-        public Gato(GeneroMascota genero) 
-        {
-            this.Genero = genero;
-   
-        }
-                public GeneroMascota Genero {get; set;}
+        public GeneroMascota Genero {get; set;}
+        public string TipoSangreMinino {get; set;}
     }
 }
