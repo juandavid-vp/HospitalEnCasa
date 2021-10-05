@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1niLX20IFcjYoW2LLn0T19YpiUIDNDMbeJoo7bbjj5FkzWeasPXVMXdkgrdvppQusOONVZpDaHBFyWVot7MueA==",
+  "dgSpecHash": "VlpoTpOIV8LGgm+A2HdSghOidkBHgCryYJwwex/RN7njF01GNTscap4mfzkd+s9bLzgkcT11uNgOOouWDUhvWA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.Consola\\ClinicaVeterinaria.App.Consola.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\ya-ke\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.0\\microsoft.entityframeworkcore.design.5.0.0.nupkg.sha512",
     "C:\\Users\\ya-ke\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.0\\microsoft.entityframeworkcore.relational.5.0.0.nupkg.sha512",
     "C:\\Users\\ya-ke\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.0\\microsoft.entityframeworkcore.sqlserver.5.0.0.nupkg.sha512",
+    "C:\\Users\\ya-ke\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.0\\microsoft.entityframeworkcore.tools.5.0.0.nupkg.sha512",
     "C:\\Users\\ya-ke\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\ya-ke\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\ya-ke\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",

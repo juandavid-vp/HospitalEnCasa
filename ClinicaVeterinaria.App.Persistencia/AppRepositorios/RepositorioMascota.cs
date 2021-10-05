@@ -20,10 +20,10 @@ namespace ClinicaVeterinaria.App.Persistencia
 
         public Mascota editMascotas(Mascota mascota)
         {
-             Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.IdMascota == mascota.IdMascota);
+             Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.MascotaId == mascota.MascotaId);
             if (mascotaEncontrado != null)
             {
-                mascotaEncontrado.IdMascota = mascota.IdMascota;
+                mascotaEncontrado.MascotaId = mascota.MascotaId;
                 mascotaEncontrado.Nacimiento = mascota.Nacimiento;
                 mascotaEncontrado.Peso = mascota.Peso;
                 mascotaEncontrado.Especie = mascota.Especie;
@@ -39,15 +39,15 @@ namespace ClinicaVeterinaria.App.Persistencia
             return _appContext.Mascotas;
         }
 
-        public Mascota getMascotas(int IdMascota)
+        public Mascota getMascotas(int MascotaId)
         {
-            Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.IdMascota == IdMascota);
+            Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.MascotaId == MascotaId);
             return mascotaEncontrado;
         }
 
-        public void removeMascotas(int IdMascota)
+        public void removeMascotas(int MascotaId)
         {
-            Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.IdMascota == IdMascota);
+            Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.MascotaId == MascotaId);
             if(mascotaEncontrado != null)
             {
                 _appContext.Mascotas.Remove(mascotaEncontrado);

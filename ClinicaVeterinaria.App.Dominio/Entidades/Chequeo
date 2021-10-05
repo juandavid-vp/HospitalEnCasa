@@ -5,9 +5,10 @@ namespace ClinicaVeterinaria.App.Dominio
 
     public class Chequeo
     {
+        public int ChequeoId { get; set; }
         public int Pulso { get; set; }
         public int PresionArterial { get; set; }
-        public Boolean Consiente = true;
+        public String Consiente { get; set;}
         public String TipoSangre { get; set; }
         public String Temperatura { get; set; }
         public String Observaciones { get; set; }

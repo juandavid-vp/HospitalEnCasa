@@ -7,7 +7,7 @@ namespace ClinicaVeterinaria.App.Consola
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World Entity Framework!");
         }
     }
 }

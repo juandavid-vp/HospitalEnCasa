@@ -4,7 +4,7 @@ namespace ClinicaVeterinaria.App.Dominio
 {
     public class Mascota 
     {
-        public int IdMascota { get; set; }
+        public int MascotaId { get; set; }
         public string NombreM {get; set;}
         public float Peso { get; set; }
         public DateTime Nacimiento { get; set;}

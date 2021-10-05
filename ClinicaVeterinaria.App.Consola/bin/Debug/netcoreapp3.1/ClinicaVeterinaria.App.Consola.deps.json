@@ -9,7 +9,10 @@
       "ClinicaVeterinaria.App.Consola/1.0.0": {
         "dependencies": {
           "ClinicaVeterinaria.App.Persistencia": "1.0.0",
-          "Microsoft.EntityFrameworkCore.Design": "5.0.0"
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Tools": "5.0.0"
         },
         "runtime": {
           "ClinicaVeterinaria.App.Consola.dll": {}
@@ -164,6 +167,11 @@
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.0.20.52303"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/5.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "5.0.0"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
@@ -1168,6 +1176,13 @@
       "sha512": "sha512-ChtvV0o7F1LsD1ek6pgADRJOzswf2YiPlqlEo0SZOfTp3daHgibp4JC9XXI/oXnQoUuRPuqMGtvgxuDXpr2xwQ==",
       "path": "microsoft.entityframeworkcore.sqlserver/5.0.0",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HSV7DLFMImkOuhnExianO/Csn1O/6s7h1kQxPFDa6zgfCQI09fyh7zzJoJ3KQiMUnajBBfYkEE9GtK7FoyeHOA==",
+      "path": "microsoft.entityframeworkcore.tools/5.0.0",
+      "hashPath": "microsoft.entityframeworkcore.tools.5.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
       "type": "package",

@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+bK30urOeISyjqUUZmdnEg1ke7hh+f9Edfz9m0o0ie4+iOnw8AV1Er0RzVvpxkNZNY1TV5bS5saLa3+b/N4Ukw==",
+  "dgSpecHash": "j3QKM6h9JzNKtIsGEbs3W4BBqPLtwS5jFWmMvCENhq8ouCbZ3+CXqNbKKSmm4YL/RHe76EcOM8+nyozpXvMRRQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\ya-ke\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\ya-ke\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

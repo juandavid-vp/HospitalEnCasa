@@ -7,3 +7,13 @@ C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Dominio\bin\
 C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Dominio\bin\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.pdb
 C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.dll
 C:\ClinicaVeterinaria\ClinicaVeterinaria.App\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.pdb
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\bin\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.deps.json
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\bin\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.dll
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\bin\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.pdb
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.csproj.AssemblyReference.cache
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.AssemblyInfo.cs
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.dll
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.Dominio\obj\Debug\netstandard2.1\ClinicaVeterinaria.App.Dominio.pdb
