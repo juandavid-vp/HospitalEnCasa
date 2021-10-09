@@ -11,6 +11,12 @@ namespace ClinicaVeterinaria.App.Persistencia
         {
             this._appContext = appContext;
         }
+
+        public void AddMascota(Mascota mascota)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Mascota addMascotas(Mascota mascota)
         {
             Mascota newMascota = _appContext.Add(mascota).Entity;
@@ -55,5 +61,6 @@ namespace ClinicaVeterinaria.App.Persistencia
             }
 
         }
+
     }
 }

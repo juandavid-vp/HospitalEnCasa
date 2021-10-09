@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClinicaVeterinaria.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211005144130_Initial")]
+    [Migration("20211007181508_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -73,9 +73,6 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
 
                     b.HasKey("MascotaId");
 
-                    b.HasIndex("MascotaId")
-                        .IsUnique();
-
                     b.ToTable("Mascotas");
                 });
 
@@ -106,6 +103,9 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Cedula")
+                        .IsUnique();
 
                     b.ToTable("Personas");
 

@@ -71,9 +71,6 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
 
                     b.HasKey("MascotaId");
 
-                    b.HasIndex("MascotaId")
-                        .IsUnique();
-
                     b.ToTable("Mascotas");
                 });
 
@@ -104,6 +101,9 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Cedula")
+                        .IsUnique();
 
                     b.ToTable("Personas");
 

@@ -1,0 +1,33 @@
+﻿@page
+@model ClinicaVeterinaria.App.FrontEnd.Pages.ListMascotasModel
+
+@{
+}
+<h1>Gestionar médicos</h1>
+<p>En está pagina podrás gestionar los mascotas</p>
+<a class="btn btn-primary table-btn" asp-page="./AddMascota">Agregar mascota</a>
+<table class="table table-dark">
+<tr>
+    <th scope="col">MascotaId</th>
+    <th scope="col">NombreM</th>
+    <th scope="col">Especie</th>
+    <th scope="col">Nacimiento</th>
+    <th scope="col">Color</th>
+    <th scope="col">Descripción</th>
+</tr>
+@foreach(var mascota in Model.mascotas)
+{
+    <tr>
+        <td>@mascota.MascotaId</td>
+        <td>@mascota.NombreM</td>
+        <td>@mascota.Nacimiento</td>
+        <td>@mascota.Especie</td>
+        <td>@mascota.Color</td>
+        <td>@mascota.Descripción</td>
+        <td><a class="btn btn-primary table-btn" asp-page="./DetailMascota" asp-route-MascotaId="@mascota.MascotaId">Detalles</a><br>
+        <a class="btn btn-primary table-btn" asp-page="./EditMascota" asp-route-MascotaId="@mascota.MascotaId">Editar</a><br>
+        <a class="btn btn-primary table-btn" asp-page="./RemoveMascota" asp-route-MascotaId="@mascota.MascotaId">Eliminar</a>
+        <br>
+    </tr>
+}
+</table>

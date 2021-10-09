@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ClinicaVeterinaria.App.Persistencia;
+using ClinicaVeterinaria.App.Dominio;
 
 namespace ClinicaVeterinaria.App.FrontEnd
 {
@@ -23,7 +25,10 @@ namespace ClinicaVeterinaria.App.FrontEnd
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //AppContext _appcontext = new AppContext();
             services.AddRazorPages();
+            services.AddSingleton<IRepositorioVeterinario>(new RepositorioVetrinario(new Persistencia.AppContext()));  
+            services.AddSingleton<IRepositorioMascota>(new RepositorioMascota(new Persistencia.AppContext())); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -10,6 +10,7 @@ namespace ClinicaVeterinaria.App.Persistencia
         public DbSet<Veterinario> Veterinarios{get; set;}
         public DbSet<Auxiliar> Auxiliares{get; set;}
         public DbSet<Mascota> Mascotas{get; set;}
+        public DbSet<Veterinario>veterinarios{get; set;}
         public DbSet<HistoriaClinica>historiaClinicas{get; set;}
        // public DbSet<Chequeo>Chequeos{get; set;}        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -22,12 +23,12 @@ namespace ClinicaVeterinaria.App.Persistencia
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            /*builder.Entity<Persona>()
+            builder.Entity<Persona>()
                 .HasIndex(u => u.Cedula)
-                .IsUnique();*/
-            builder.Entity<Mascota>()
-                .HasIndex(u => u.MascotaId)
                 .IsUnique();
+            /*builder.Entity<Mascota>()
+                .HasIndex(u => u.MascotaId)
+                .IsUnique();*/
 
         }
     }

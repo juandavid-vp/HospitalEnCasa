@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using ClinicaVeterinaria.App.Dominio;
 
 
-namespace ClinicaVeterinaria.App.Dominio
+namespace ClinicaVeterinaria.App.Persistencia
 {
 
     public interface IRepositorioMascota
@@ -12,6 +12,6 @@ namespace ClinicaVeterinaria.App.Dominio
         Mascota addMascotas(Mascota mascota);
         Mascota editMascotas(Mascota mascota);
         void removeMascotas(int IdMascota);
-
+        void AddMascota(Mascota mascota);
     }
 }

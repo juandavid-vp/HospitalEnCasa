@@ -98,9 +98,9 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 column: "veterinarioId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Mascotas_MascotaId",
-                table: "Mascotas",
-                column: "MascotaId",
+                name: "IX_Personas_Cedula",
+                table: "Personas",
+                column: "Cedula",
                 unique: true);
 
             migrationBuilder.CreateIndex(
