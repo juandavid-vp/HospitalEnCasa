@@ -1,6 +1,5 @@
 ﻿@page
 @model ClinicaVeterinaria.App.FrontEnd.Pages.ListMascotasModel
-
 @{
 }
 <h1>Gestionar médicos</h1>
@@ -15,7 +14,7 @@
     <th scope="col">Color</th>
     <th scope="col">Descripción</th>
 </tr>
-@foreach(var mascota in Model.mascotas)
+@foreach( var mascota in Model.mascotas)
 {
     <tr>
         <td>@mascota.MascotaId</td>

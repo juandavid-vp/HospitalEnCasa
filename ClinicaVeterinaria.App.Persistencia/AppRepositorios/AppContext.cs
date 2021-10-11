@@ -11,8 +11,8 @@ namespace ClinicaVeterinaria.App.Persistencia
         public DbSet<Auxiliar> Auxiliares{get; set;}
         public DbSet<Mascota> Mascotas{get; set;}
         public DbSet<Veterinario>veterinarios{get; set;}
-        public DbSet<HistoriaClinica>historiaClinicas{get; set;}
-       // public DbSet<Chequeo>Chequeos{get; set;}        
+        public DbSet<HistoriaClinica>HistoriaClinicas{get; set;}
+        public DbSet<Chequeo>Chequeos{get; set;}        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -26,9 +26,13 @@ namespace ClinicaVeterinaria.App.Persistencia
             builder.Entity<Persona>()
                 .HasIndex(u => u.Cedula)
                 .IsUnique();
-            /*builder.Entity<Mascota>()
+            builder.Entity<Mascota>()
                 .HasIndex(u => u.MascotaId)
-                .IsUnique();*/
+                .IsUnique();
+            builder.Entity<HistoriaClinica>()
+                .HasIndex(u => u.HistoriaClinicaId)
+                .IsUnique();
+            
 
         }
     }

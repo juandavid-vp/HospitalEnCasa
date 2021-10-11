@@ -11,9 +11,7 @@ namespace ClinicaVeterinaria.App.Dominio
         public String Especie { get; set; }
         public String Color { get; set; }
         public String Descripción { get; set; }
-        
-       // public Veterinario veterinario { get; set; }
-       // public Auxiliar auxiliar { get; set; }
+        //public Owner  owner { get; set; }
         
 
     }

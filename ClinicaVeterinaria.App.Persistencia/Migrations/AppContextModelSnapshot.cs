@@ -19,29 +19,117 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.HistoriaClinica", b =>
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Anotacion", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("AnotacionId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int>("Duracion")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FechaHora")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("MascotaId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("auxiliarId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("fecha")
-                        .HasColumnType("datetime2");
+                    b.Property<int?>("ownerId")
+                        .HasColumnType("int");
 
                     b.Property<int?>("veterinarioId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("AnotacionId");
+
+                    b.HasIndex("MascotaId");
 
                     b.HasIndex("auxiliarId");
 
+                    b.HasIndex("ownerId");
+
                     b.HasIndex("veterinarioId");
 
-                    b.ToTable("historiaClinicas");
+                    b.ToTable("Anotacion");
+                });
+
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Chequeo", b =>
+                {
+                    b.Property<int>("ChequeoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("AnotacionId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Consiente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Observaciones")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PresionArterial")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Pulso")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Temperatura")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TipoSangre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ChequeoId");
+
+                    b.HasIndex("AnotacionId");
+
+                    b.ToTable("Chequeos");
+                });
+
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.HistoriaClinica", b =>
+                {
+                    b.Property<int>("HistoriaClinicaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("AnotacionId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MascotaId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("auxiliarId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ownerId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("veterinarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("HistoriaClinicaId");
+
+                    b.HasIndex("AnotacionId");
+
+                    b.HasIndex("HistoriaClinicaId")
+                        .IsUnique();
+
+                    b.HasIndex("MascotaId");
+
+                    b.HasIndex("auxiliarId");
+
+                    b.HasIndex("ownerId");
+
+                    b.HasIndex("veterinarioId");
+
+                    b.ToTable("HistoriaClinicas");
                 });
 
             modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Mascota", b =>
@@ -70,6 +158,9 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .HasColumnType("real");
 
                     b.HasKey("MascotaId");
+
+                    b.HasIndex("MascotaId")
+                        .IsUnique();
 
                     b.ToTable("Mascotas");
                 });
@@ -139,6 +230,11 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("MascotaId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("MascotaId");
+
                     b.HasDiscriminator().HasValue("Owner");
                 });
 
@@ -162,19 +258,22 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Veterinario_LicenciaProfesional");
 
-                    b.Property<int?>("MascotaId")
-                        .HasColumnType("int");
-
-                    b.HasIndex("MascotaId");
-
                     b.HasDiscriminator().HasValue("Veterinario");
                 });
 
-            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.HistoriaClinica", b =>
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Anotacion", b =>
                 {
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Mascota", "mascota")
+                        .WithMany()
+                        .HasForeignKey("MascotaId");
+
                     b.HasOne("ClinicaVeterinaria.App.Dominio.Auxiliar", "auxiliar")
                         .WithMany()
                         .HasForeignKey("auxiliarId");
+
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Owner", "owner")
+                        .WithMany()
+                        .HasForeignKey("ownerId");
 
                     b.HasOne("ClinicaVeterinaria.App.Dominio.Veterinario", "veterinario")
                         .WithMany()
@@ -182,10 +281,56 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
 
                     b.Navigation("auxiliar");
 
+                    b.Navigation("mascota");
+
+                    b.Navigation("owner");
+
                     b.Navigation("veterinario");
                 });
 
-            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Veterinario", b =>
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Chequeo", b =>
+                {
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Anotacion", "anotacion")
+                        .WithMany()
+                        .HasForeignKey("AnotacionId");
+
+                    b.Navigation("anotacion");
+                });
+
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.HistoriaClinica", b =>
+                {
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Anotacion", "anotacion")
+                        .WithMany()
+                        .HasForeignKey("AnotacionId");
+
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Mascota", "mascota")
+                        .WithMany()
+                        .HasForeignKey("MascotaId");
+
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Auxiliar", "auxiliar")
+                        .WithMany()
+                        .HasForeignKey("auxiliarId");
+
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Owner", "owner")
+                        .WithMany()
+                        .HasForeignKey("ownerId");
+
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Veterinario", "veterinario")
+                        .WithMany()
+                        .HasForeignKey("veterinarioId");
+
+                    b.Navigation("anotacion");
+
+                    b.Navigation("auxiliar");
+
+                    b.Navigation("mascota");
+
+                    b.Navigation("owner");
+
+                    b.Navigation("veterinario");
+                });
+
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Owner", b =>
                 {
                     b.HasOne("ClinicaVeterinaria.App.Dominio.Mascota", "mascota")
                         .WithMany()

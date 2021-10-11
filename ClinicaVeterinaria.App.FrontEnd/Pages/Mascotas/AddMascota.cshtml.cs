@@ -6,14 +6,17 @@ using ClinicaVeterinaria.App.Dominio;
 using ClinicaVeterinaria.App.Persistencia;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+//using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore;
 
 namespace ClinicaVeterinaria.App.FrontEnd.Pages
 {
-    public class AddMascotaModel : PageModel
+    public class addMascotaModel : PageModel
     {
         private readonly IRepositorioMascota repositorioMascota;
+        
         public Mascota mascota{get; set;}
-        private AddMascotaModel(IRepositorioMascota repositorioMascota)
+        public addMascotaModel(IRepositorioMascota repositorioMascota)
         {
             this.repositorioMascota = repositorioMascota;
         }

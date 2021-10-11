@@ -14,7 +14,7 @@ namespace ClinicaVeterinaria.App.Dominio
         public String Observaciones { get; set; }
         //public Veterinario veterinario { get; set; }
        // public String Auxiliar { get; set; }
-        //public Anotacion anotacion { get; set; }
+        public Anotacion anotacion { get; set; }
         
     }
 }

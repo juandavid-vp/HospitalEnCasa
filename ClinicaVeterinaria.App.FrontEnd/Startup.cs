@@ -27,7 +27,7 @@ namespace ClinicaVeterinaria.App.FrontEnd
         {
             //AppContext _appcontext = new AppContext();
             services.AddRazorPages();
-            services.AddSingleton<IRepositorioVeterinario>(new RepositorioVetrinario(new Persistencia.AppContext()));  
+           // services.AddSingleton<IRepositorioVeterinario>(new RepositorioVetrinario(new Persistencia.AppContext()));  
             services.AddSingleton<IRepositorioMascota>(new RepositorioMascota(new Persistencia.AppContext())); 
         }
 

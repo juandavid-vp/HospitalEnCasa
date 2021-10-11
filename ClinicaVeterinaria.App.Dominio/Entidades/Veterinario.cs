@@ -8,7 +8,6 @@ namespace ClinicaVeterinaria.App.Dominio
         public string LicenciaProfesional{get; set;}
         public string Especializacion{get; set;}
         public int EstadoVeterinario{get; set;}
-        public Mascota mascota{get; set;}
                 
     }
 
