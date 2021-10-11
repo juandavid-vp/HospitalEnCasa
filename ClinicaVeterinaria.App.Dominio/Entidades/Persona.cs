@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ClinicaVeterinaria.App.Dominio
 {
-    public class Persona {
 
-        [Required(ErrorMessage ="La cedula es obligatoria"),Range(0,int.MaxValue,ErrorMessage="La cedula debe ser mayor que 0")]
+    public class Persona{
+
         public int Id{get; set;}
 
 
@@ -21,18 +21,19 @@ namespace ClinicaVeterinaria.App.Dominio
         public string NumeroTelefono {get; set;}
 
 
-        [Required(ErrorMessage ="El correo electronico obligatorio"),EmailAddress(ErrorMessage = "El dato debe ser un email")]
+        [Required(ErrorMessage ="El correo electronico es obligatorio"),EmailAddress(ErrorMessage = "El dato debe ser un email")]
         public string CorreoElectronico {get; set;}
 
 
+        [Required(ErrorMessage ="La documento es obligatorio"),Range(0,int.MaxValue,ErrorMessage="La cedula debe ser mayor que 0")]    
         public int NumeroIdentificacion {get; set;}
 
 
         [Required(ErrorMessage = "El nickname es requerido."),RegularExpression(@"^\S*$", ErrorMessage = "No se permiten espacios")]
         public string UserName {get; set;}
-       
+
         
-        [Required(ErrorMessage = "La contraseña es requerida."),DataType(DataType.Password),StringLength(16,MinimumLength=8,ErrorMessage="La contraseña debe tener entre 8 y 16 carácteres")]
+        [Required(ErrorMessage = "La contraseña es obligatoria."),DataType(DataType.Password),StringLength(16,MinimumLength=8,ErrorMessage="La contraseña debe tener entre 8 y 16 carácteres")]
         public string PassWord {get; set;}
     }    
 }    
