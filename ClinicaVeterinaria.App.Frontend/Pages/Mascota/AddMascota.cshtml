@@ -6,9 +6,15 @@
 <h1>Agregar mascota</h1>
 <form method="post" class="mt-3">
     <div class="form-group row">
-    <label asp-for="mascota.NombreM" class="col-sm-2">NombreM</label>
-    <input asp-for="mascota.NombreM" class="form-control">
-    <span asp-validation-for="mascota.NombreM" class="text-danger"></span>
+       <label asp-for="mascota.Id" class="col-sm-2">MascotaId</label>
+       <input asp-for="mascota.Id" class="form-control" >
+       <span asp-validation-for="mascota.Id" class="text-danger"></span>
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="mascota.NombreM" class="col-sm-2">NombreM</label>
+        <input asp-for="mascota.NombreM" class="form-control">
+        <span asp-validation-for="mascota.NombreM" class="text-danger"></span>
     </div>   
     <div class="form-group row">
         <label asp-for="mascota.Nacimiento" class="col-sm-2">Nacimiento</label>
