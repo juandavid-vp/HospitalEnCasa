@@ -15619,13 +15619,53 @@
   "RootNamespace": "ClinicaVeterinaria.App.FrontEnd",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Anotaciones\\AddAnotacion.cshtml",
+      "TargetPath": "Pages\\Anotaciones\\AddAnotacion.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Chequeos\\EditChequeo.cshtml",
+      "TargetPath": "Pages\\Chequeos\\EditChequeo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\PagesAgendas\\ListAgendas.cshtml",
+      "TargetPath": "PagesAgendas\\ListAgendas.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\HistoriaClinicas\\EditHistoriaClinica.cshtml",
+      "TargetPath": "Pages\\HistoriaClinicas\\EditHistoriaClinica.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Agendas\\DetailAgenda.cshtml",
+      "TargetPath": "Pages\\Agendas\\DetailAgenda.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Anotaciones\\EditAnotacion.cshtml",
+      "TargetPath": "Pages\\Anotaciones\\EditAnotacion.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Veterinarios\\DetailVeterinario.cshtml",
       "TargetPath": "Pages\\Veterinarios\\DetailVeterinario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Anotaciones\\DetailAnotacion.cshtml",
+      "TargetPath": "Pages\\Anotaciones\\DetailAnotacion.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Chequeos\\AddChequeo.cshtml",
+      "TargetPath": "Pages\\Chequeos\\AddChequeo.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15639,8 +15679,53 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Diagnosticos\\AddDiagnostico.cshtml",
+      "TargetPath": "Pages\\Diagnosticos\\AddDiagnostico.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Mascotas\\DetailMascota.cshtml",
       "TargetPath": "Pages\\Mascotas\\DetailMascota.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\HistoriaClinicas\\ListHistoriasClinicas.cshtml",
+      "TargetPath": "Pages\\HistoriaClinicas\\ListHistoriasClinicas.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Owners\\DetailOwner.cshtml",
+      "TargetPath": "Pages\\Owners\\DetailOwner.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Auxiliares\\EditAuxiliar.cshtml",
+      "TargetPath": "Pages\\Auxiliares\\EditAuxiliar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Chequeos\\ListChequeos.cshtml",
+      "TargetPath": "Pages\\Chequeos\\ListChequeos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Auxiliares\\DetailAuxiliar.cshtml",
+      "TargetPath": "Pages\\Auxiliares\\DetailAuxiliar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Auxiliares\\ListAuxiliares.cshtml",
+      "TargetPath": "Pages\\Auxiliares\\ListAuxiliares.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Agendas\\AddAgenda.cshtml",
+      "TargetPath": "Pages\\Agendas\\AddAgenda.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Owners\\EditOwner.cshtml",
+      "TargetPath": "Pages\\Owners\\EditOwner.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15649,13 +15734,38 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Agendas\\EditAgenda.cshtml",
+      "TargetPath": "Pages\\Agendas\\EditAgenda.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Index.cshtml",
       "TargetPath": "Pages\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Chequeos\\DetailChequeo-na.cshtml",
+      "TargetPath": "Pages\\Chequeos\\DetailChequeo-na.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Owners\\AddOwner.cshtml",
+      "TargetPath": "Pages\\Owners\\AddOwner.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Mascotas\\EditMascota.cshtml",
       "TargetPath": "Pages\\Mascotas\\EditMascota.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\HistoriaClinicas\\AddHistoriaClinica.cshtml",
+      "TargetPath": "Pages\\HistoriaClinicas\\AddHistoriaClinica.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Anotaciones\\ListAnotaciones.cshtml",
+      "TargetPath": "Pages\\Anotaciones\\ListAnotaciones.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15679,6 +15789,26 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Owners\\ListOwners.cshtml",
+      "TargetPath": "Pages\\Owners\\ListOwners.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Auxiliares\\AddAuxiliar.cshtml",
+      "TargetPath": "Pages\\Auxiliares\\AddAuxiliar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Diagnosticos\\EditDiagnostico.cshtml",
+      "TargetPath": "Pages\\Diagnosticos\\EditDiagnostico.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\HistoriaClinicas\\DetailHistoriaClinica.cshtml",
+      "TargetPath": "Pages\\HistoriaClinicas\\DetailHistoriaClinica.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Veterinarios\\AddVeterinario.cshtml",
       "TargetPath": "Pages\\Veterinarios\\AddVeterinario.cshtml",
       "FileKind": "mvc"
@@ -15686,6 +15816,16 @@
     {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Veterinarios\\ListVeterinarios.cshtml",
       "TargetPath": "Pages\\Veterinarios\\ListVeterinarios.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Diagnosticos\\ListDiagnosticos.cshtml",
+      "TargetPath": "Pages\\Diagnosticos\\ListDiagnosticos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Diagnosticos\\DetailDiagnostico.cshtml",
+      "TargetPath": "Pages\\Diagnosticos\\DetailDiagnostico.cshtml",
       "FileKind": "mvc"
     },
     {

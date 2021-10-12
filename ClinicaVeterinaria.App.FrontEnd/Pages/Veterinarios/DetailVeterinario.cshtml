@@ -2,3 +2,15 @@
 @model ClinicaVeterinaria.App.FrontEnd.Pages.DetailVeterinarioModel
 @{
 }
+<h1>Detalle veterinario @Model.veterinario.Nombre</h1>
+<ul>
+    <li>Cedula: @Model.veterinario.Cedula</li>
+    <li>Nombre: @Model.veterinario.Nombre</li>
+    <li>Edad: @Model.veterinario.FechaNacimiento</li>
+    <li>CorreoElectronico: @Model.veterinario.CorreoElectronico</li>
+    <li>NumeroTelefono: @Model.veterinario.NumeroTelefono</li>
+    <li>Especializacion: @Model.veterinario.Especializacion</li>
+    <li>HorarioLaboral: @Model.veterinario.HorarioLaboral</li>
+    <li>LicenciaProfesional: @Model.veterinario.LicenciaProfesional</li>
+    <li>EstadoVeterinario: @Model.veterinario.EstadoVeterinario</li>
+</ul>
