@@ -17,8 +17,7 @@ namespace ClinicaVeterinaria.App.Persistencia
         {
             _appContext=appContext;
         }
-        public Mascota AddMascota 
-        (Mascota mascota)
+        public Mascota AddMascota (Mascota mascota)
         {
             var mascotaAdicionada = _appContext.Mascotas.Add(mascota);
             _appContext.SaveChanges();
@@ -41,7 +40,7 @@ namespace ClinicaVeterinaria.App.Persistencia
             return mascotaEncontrada;
         }
 
-        public IEnumerable<Mascota> getAllMascotas()
+        public IEnumerable<Mascota> GetAllMascotas()
         {
             return _appContext.Mascotas;
         }

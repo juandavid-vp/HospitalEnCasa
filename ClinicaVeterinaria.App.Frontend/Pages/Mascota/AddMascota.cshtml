@@ -1,0 +1,68 @@
+﻿@page
+@model ClinicaVeterinaria.App.FrontEnd.Pages.addMascotaModel
+@using ClinicaVeterinaria.App.Dominio
+@{
+}
+<h1>Agregar mascota</h1>
+<form method="post" class="mt-3">
+    <!-- <div class="form-group row">
+       <label asp-for="mascota.MascotaId" class="col-sm-2">MascotaId</label>
+       <input asp-for="mascota.MascotaId" class="form-control" >
+       <span asp-validation-for="mascota.MascotaId" class="text-danger"></span>
+       </div> *@
+    -->
+    <div class="form-group row">
+        <label asp-for="mascota.NombreM" class="col-sm-2">NombreM</label>
+        <input asp-for="mascota.NombreM" class="form-control">
+        <span asp-validation-for="mascota.NombreM" class="text-danger"></span>
+    </div>   
+    <div class="form-group row">
+        <label asp-for="mascota.Nacimiento" class="col-sm-2">Nacimiento</label>
+        <input asp-for="mascota.Nacimiento" class="form-control">
+        <span asp-validation-for="mascota.Nacimiento" class="text-danger"></span>
+    </div>  
+    <div class="form-group row">
+        <label asp-for="mascota.Peso" class="col-sm-2">Peso</label>
+        <input asp-for="mascota.Peso" class="form-control">
+        <span asp-validation-for="mascota.Peso" class="text-danger"></span>
+    </div>  
+    <div class="form-group row">
+        <label asp-for="mascota.Especie" class="col-sm-2">Especie</label>
+        <input asp-for="mascota.Especie" class="form-control" >
+        <span asp-validation-for="mascota.Especie" class="text-danger"></span>
+    </div>  
+    <div class="form-group row">
+        <label asp-for="mascota.Color" class="col-sm-2">Color</label>
+        <input asp-for="mascota.Color" class="form-control" >
+        <span asp-validation-for="mascota.Color" class="text-danger"></span>
+    </div> 
+   
+    <div class="form-group row">
+        <label asp-for="mascota.Descripción" class="col-sm-2">Descripción</label>
+        <input asp-for="mascota.Descripción" class="form-control" >   
+        <span asp-validation-for="mascota.Descripción" class="text-danger"></span>
+    </div>
+    <div class="form-group row">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a asp-page="./ListMascotas" class="btn btn-primary">Cancelar</a>
+    </div>
+
+    <!-- <div class="form-group row">
+        <label asp-for="mascota.descripcion" class="col-sm-2">Descripción</label>
+        <div class="col-sm-10">
+            <select asp-for="mascota.descripcion" asp-items="Html.GetEnumSelectList<Genero>()"></select>   
+        </div>
+        <span class="text-danger" asp-validation-for="medico.genero"></span>
+    </div>  -->
+    <!-- <div class="form-group row">
+        <label asp-for="medico.username" class="col-sm-2">Username</label>
+        <input asp-for="medico.username" class="form-control" >
+        <span asp-validation-for="medico.username" class="text-danger"></span>
+    </div> --> 
+   <!-- <div class="form-group row">
+        <label asp-for="medico.password" class="col-sm-2">Contraseña</label>
+        <input asp-for="medico.password" class="form-control" >
+        <span asp-validation-for="medico.password" class="text-danger"></span>
+    </div> --> 
+
+</form>

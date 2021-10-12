@@ -6,7 +6,7 @@ namespace ClinicaVeterinaria.App.Persistencia
 {
     public interface IRepositorioMascota 
     {
-        IEnumerable<Mascota> getAllMascotas();
+        IEnumerable<Mascota> GetAllMascotas();
         Mascota AddMascota (Mascota mascota);
         Mascota UpdateMascota (Mascota mascota);
         Mascota GetMascota (int IdMascota);

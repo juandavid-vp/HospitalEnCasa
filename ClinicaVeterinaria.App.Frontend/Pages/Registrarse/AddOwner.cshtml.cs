@@ -9,16 +9,15 @@ using ClinicaVeterinaria.App.Persistencia;
 
 namespace ClinicaVeterinaria.App.Frontend.Pages
 {
-    
     public class AddOwnerModel : PageModel
     {
         private readonly IRepositorioOwner  _repoOwner;
         public Owner owner {get; set;}
+        
         public AddOwnerModel (IRepositorioOwner _repoOwner)
         {
             this._repoOwner = _repoOwner;
         }
-
 
         public void OnGet()
         {
