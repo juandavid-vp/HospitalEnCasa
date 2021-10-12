@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using ClinicaVeterinaria.App.Dominio;
@@ -17,9 +18,9 @@ namespace ClinicaVeterinaria.App.Persistencia
 
         public Mascota addMascotas(Mascota mascota)
         {
-            String password = mascotas.Password;
-            password = security.GetMD5Hash(password);
-            mascota.password = password;
+            String Password = mascota.Password;
+            Password = security.GetMD5Hash(Password);
+            mascota.Password = Password;
             Mascota newMascota = _appContext.Add(mascota).Entity;
             _appContext.SaveChanges();
             return newMascota;
@@ -29,9 +30,12 @@ namespace ClinicaVeterinaria.App.Persistencia
         public Mascota editMascotas(Mascota mascota)
         {
             Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.MascotaId == mascota.MascotaId);
+            string Password = mascota.Password;
+            Password = security.GetMD5Hash(Password);
+            mascota.Password = Password;
+
             if (mascotaEncontrado != null)
             {
-                Mascota mascota
                 mascotaEncontrado.MascotaId = mascota.MascotaId;
                 mascotaEncontrado.NombreM = mascota.NombreM;
                 mascotaEncontrado.Nacimiento = mascota.Nacimiento;
@@ -39,6 +43,10 @@ namespace ClinicaVeterinaria.App.Persistencia
                 mascotaEncontrado.Especie = mascota.Especie;
                 mascotaEncontrado.Color = mascota.Color;
                 mascotaEncontrado.Descripción = mascota.Descripción;
+                mascotaEncontrado.Password = mascota.Password;
+                mascotaEncontrado.owner = mascota.owner;
+                mascotaEncontrado.auxiliar = mascota.auxiliar;
+                mascotaEncontrado.veterinario = mascota.veterinario;
                 _appContext.SaveChanges();
             }
             return mascotaEncontrado;
@@ -47,13 +55,14 @@ namespace ClinicaVeterinaria.App.Persistencia
 
         public IEnumerable<Mascota> getAllMascotas()
         {
-            return _appContext.Mascotas;
+            return _appContext.Mascotas.Include("owner").Include("veterinario").Include("auxiliar");
         }
 
         public Mascota getMascotas(int MascotaId)
         {
-           Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.MascotaId == MascotaId);
-            return mascotaEncontrado;
+           //Mascota mascotaEncontrado = 
+           return _appContext.Mascotas.Include("owner").Include("veterinario").Include("auxiliar").FirstOrDefault(m => m.MascotaId == MascotaId);
+            //return mascotaEncontrado;
 
         }
 

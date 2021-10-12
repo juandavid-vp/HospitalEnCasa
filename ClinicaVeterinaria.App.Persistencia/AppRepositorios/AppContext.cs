@@ -28,21 +28,7 @@ namespace ClinicaVeterinaria.App.Persistencia
             builder.Entity<Persona>()
                 .HasIndex(u => u.Cedula)
                 .IsUnique();
-            builder.Entity<Mascota>()
-                .HasIndex(m => m.MascotaId)
-                .IsUnique();
-            builder.Entity<HistoriaClinica>()
-                .HasIndex(u => u.HistoriaClinicaId)
-                .IsUnique();
-            builder.Entity<Veterinario>()
-                .HasIndex(v => v.Cedula)
-                .IsUnique();
-            builder.Entity<Auxiliar>()
-                .HasIndex(a => a.Cedula)
-                .IsUnique();
-            builder.Entity<Owner>()
-                .HasIndex(o => o.Cedula)
-                .IsUnique();
+            builder.Entity<Persona>().HasIndex(p => p.Username).IsUnique();
         }
     }
 }

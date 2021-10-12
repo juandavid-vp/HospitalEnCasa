@@ -30,7 +30,6 @@ namespace ClinicaVeterinaria.App.Persistencia
                 ownerEncontrado.Direccion=owner.Direccion;
                 ownerEncontrado.NumeroTelefono=owner.NumeroTelefono;
                 ownerEncontrado.FechaNacimiento=owner.FechaNacimiento;
-                ownerEncontrado.mascota = owner.mascota;
                 _appContext.SaveChanges();
             }
             return ownerEncontrado;

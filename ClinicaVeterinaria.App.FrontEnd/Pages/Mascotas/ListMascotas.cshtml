@@ -13,6 +13,10 @@
     <th scope="col">Nacimiento</th>
     <th scope="col">Color</th>
     <th scope="col">Descripción</th>
+    <th scope="col">Veterinario</th>
+    <th scope="col">Auxiliar</th>
+    <th scope="col">Owner</th>
+
 </tr>
 @foreach( var mascota in Model.Mascotas)
 {
@@ -23,6 +27,9 @@
         <td>@mascota.Especie</td>
         <td>@mascota.Color</td>
         <td>@mascota.Descripción</td>
+        <td>@mascota.owner</td>
+        <td>@mascota.veterinario</td>
+         <td>@mascota.auxiliar</td>
         <td><a class="btn btn-primary table-btn" asp-page="./DetailMascota" asp-route-MascotaId="@mascota.MascotaId">Detalles</a><br>
         <a class="btn btn-primary table-btn" asp-page="./EditMascota" asp-route-MascotaId="@mascota.MascotaId">Editar</a><br>
         <a class="btn btn-primary table-btn" asp-page="./RemoveMascota" asp-route-MascotaId="@mascota.MascotaId">Eliminar</a>

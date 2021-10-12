@@ -1,4 +1,5 @@
 using System;
+//using System.ComponentModel.DataAnnotations;
 
 namespace ClinicaVeterinaria.App.Dominio
 {
@@ -6,7 +7,6 @@ namespace ClinicaVeterinaria.App.Dominio
     {
         public string Direccion{get; set;}
         public string Ciudad{get; set;}
-        public Mascota mascota{get; set;}
         
     }
 }

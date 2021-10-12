@@ -187,9 +187,6 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
 
                     b.HasIndex("ChequeoId");
 
-                    b.HasIndex("HistoriaClinicaId")
-                        .IsUnique();
-
                     b.HasIndex("MascotaId");
 
                     b.HasIndex("auxiliarId");
@@ -223,15 +220,30 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.Property<string>("NombreM")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<float>("Peso")
                         .HasColumnType("real");
 
+                    b.Property<int?>("auxiliarId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ownerId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("veterinarioId")
+                        .HasColumnType("int");
+
                     b.HasKey("MascotaId");
 
-                    b.HasIndex("MascotaId")
-                        .IsUnique();
+                    b.HasIndex("auxiliarId");
 
-                    b.ToTable("Mascota");
+                    b.HasIndex("ownerId");
+
+                    b.HasIndex("veterinarioId");
+
+                    b.ToTable("Mascotas");
                 });
 
             modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Persona", b =>
@@ -260,10 +272,20 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.Property<string>("NumeroTelefono")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("Cedula")
                         .IsUnique();
+
+                    b.HasIndex("Username")
+                        .IsUnique()
+                        .HasFilter("[Username] IS NOT NULL");
 
                     b.ToTable("Personas");
 
@@ -298,11 +320,6 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
 
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("MascotaId")
-                        .HasColumnType("int");
-
-                    b.HasIndex("MascotaId");
 
                     b.HasDiscriminator().HasValue("Owner");
                 });
@@ -441,13 +458,25 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.Navigation("veterinario");
                 });
 
-            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Owner", b =>
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Mascota", b =>
                 {
-                    b.HasOne("ClinicaVeterinaria.App.Dominio.Mascota", "mascota")
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Auxiliar", "auxiliar")
                         .WithMany()
-                        .HasForeignKey("MascotaId");
+                        .HasForeignKey("auxiliarId");
 
-                    b.Navigation("mascota");
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Owner", "owner")
+                        .WithMany()
+                        .HasForeignKey("ownerId");
+
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Veterinario", "veterinario")
+                        .WithMany()
+                        .HasForeignKey("veterinarioId");
+
+                    b.Navigation("auxiliar");
+
+                    b.Navigation("owner");
+
+                    b.Navigation("veterinario");
                 });
 #pragma warning restore 612, 618
         }
