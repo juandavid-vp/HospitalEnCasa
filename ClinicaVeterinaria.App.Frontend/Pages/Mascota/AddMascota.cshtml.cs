@@ -9,10 +9,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ClinicaVeterinaria.App.FrontEnd.Pages
 {
-    public class addMascotaModel : PageModel
+    public class AddMascotaModel : PageModel
     {
         private readonly IRepositorioMascota _repoMascota;
-        public Mascota mascota{get; set;}
+        public Mascota mascota {get; set;}
 
 
         public AddMascotaModel(IRepositorioMascota _repoMascota)
@@ -29,7 +29,7 @@ namespace ClinicaVeterinaria.App.FrontEnd.Pages
         public IActionResult OnPost(Mascota mascota){
             if(ModelState.IsValid){    
                 try{
-                    repositorioMascota.AddMascotas(mascota);
+                    _repoMascota.AddMascota(mascota);
                     return RedirectToPage("./ListMascotas");
                 }
                 catch{

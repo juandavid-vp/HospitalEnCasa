@@ -1,20 +1,14 @@
 ﻿@page
-@model ClinicaVeterinaria.App.FrontEnd.Pages.addMascotaModel
+@model ClinicaVeterinaria.App.FrontEnd.Pages.AddMascotaModel
 @using ClinicaVeterinaria.App.Dominio
 @{
 }
 <h1>Agregar mascota</h1>
 <form method="post" class="mt-3">
-    <!-- <div class="form-group row">
-       <label asp-for="mascota.MascotaId" class="col-sm-2">MascotaId</label>
-       <input asp-for="mascota.MascotaId" class="form-control" >
-       <span asp-validation-for="mascota.MascotaId" class="text-danger"></span>
-       </div> *@
-    -->
     <div class="form-group row">
-        <label asp-for="mascota.NombreM" class="col-sm-2">NombreM</label>
-        <input asp-for="mascota.NombreM" class="form-control">
-        <span asp-validation-for="mascota.NombreM" class="text-danger"></span>
+    <label asp-for="mascota.NombreM" class="col-sm-2">NombreM</label>
+    <input asp-for="mascota.NombreM" class="form-control">
+    <span asp-validation-for="mascota.NombreM" class="text-danger"></span>
     </div>   
     <div class="form-group row">
         <label asp-for="mascota.Nacimiento" class="col-sm-2">Nacimiento</label>
@@ -27,9 +21,9 @@
         <span asp-validation-for="mascota.Peso" class="text-danger"></span>
     </div>  
     <div class="form-group row">
-        <label asp-for="mascota.Especie" class="col-sm-2">Especie</label>
-        <input asp-for="mascota.Especie" class="form-control" >
-        <span asp-validation-for="mascota.Especie" class="text-danger"></span>
+        <label asp-for="mascota.Raza" class="col-sm-2">Especie</label>
+        <input asp-for="mascota.Raza" class="form-control" >
+        <span asp-validation-for="mascota.Raza" class="text-danger"></span>
     </div>  
     <div class="form-group row">
         <label asp-for="mascota.Color" class="col-sm-2">Color</label>
