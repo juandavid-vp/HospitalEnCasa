@@ -44,22 +44,21 @@ namespace ClinicaVeterinaria.App.Persistencia
             return _appContext.Mascotas;
         }
 
-        public Mascota getMascotas(int IdMascota)
+        public Mascota getMascotas(int MascotaId)
         {
-           Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.MascotaId == m.MascotaId);
+           Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.MascotaId == MascotaId);
             return mascotaEncontrado;
 
         }
 
-        public void removeMascotas(int IdMascota)
+        public void removeMascotas(int MascotaId)
         {
-            Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.MascotaId == m.MascotaId);
+            Mascota mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.MascotaId == MascotaId);
             if(mascotaEncontrado != null)
             {
                 _appContext.Mascotas.Remove(mascotaEncontrado);
                 _appContext.SaveChanges();
             }
-
         }
     }
 }

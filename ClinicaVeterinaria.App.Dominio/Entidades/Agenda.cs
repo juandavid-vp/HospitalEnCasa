@@ -2,11 +2,13 @@ using System;
 
 namespace ClinicaVeterinaria.App.Dominio
 {
-    public class Agenda //: HorarioAtencion
+    public class Agenda 
     {
-        //public int AgendaId { get; set; }
-        //public Veterinario Veterinario { get; set; }
-        //public Auxiliar Auxiliar { get; set; }
-        //public HorarioAtencion  horarioAtencion { get; set; }      
+        public int AgendaId { get; set; }
+        public Veterinario Veterinario { get; set; }
+        public Auxiliar Auxiliar { get; set; }
+        public String Descripcion { get; set; }
+        public DateTime Dia { get; set; }
+        public DateTime Hora { get; set; }
     }
 }

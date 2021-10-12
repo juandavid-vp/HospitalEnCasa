@@ -15624,6 +15624,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Veterinarios\\DetailVeterinario.cshtml",
+      "TargetPath": "Pages\\Veterinarios\\DetailVeterinario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Veterinarios\\EditVeterinario.cshtml",
+      "TargetPath": "Pages\\Veterinarios\\EditVeterinario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Shared\\_Layout.cshtml",
       "TargetPath": "Pages\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -15666,6 +15676,16 @@
     {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Privacy.cshtml",
       "TargetPath": "Pages\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Veterinarios\\AddVeterinario.cshtml",
+      "TargetPath": "Pages\\Veterinarios\\AddVeterinario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Veterinarios\\ListVeterinarios.cshtml",
+      "TargetPath": "Pages\\Veterinarios\\ListVeterinarios.cshtml",
       "FileKind": "mvc"
     },
     {

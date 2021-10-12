@@ -61,7 +61,36 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Anotacion",
+                name: "Agendas",
+                columns: table => new
+                {
+                    AgendaId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    VeterinarioId = table.Column<int>(type: "int", nullable: true),
+                    AuxiliarId = table.Column<int>(type: "int", nullable: true),
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Dia = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Hora = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Agendas", x => x.AgendaId);
+                    table.ForeignKey(
+                        name: "FK_Agendas_Personas_AuxiliarId",
+                        column: x => x.AuxiliarId,
+                        principalTable: "Personas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Agendas_Personas_VeterinarioId",
+                        column: x => x.VeterinarioId,
+                        principalTable: "Personas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Anotaciones",
                 columns: table => new
                 {
                     AnotacionId = table.Column<int>(type: "int", nullable: false)
@@ -75,27 +104,27 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Anotacion", x => x.AnotacionId);
+                    table.PrimaryKey("PK_Anotaciones", x => x.AnotacionId);
                     table.ForeignKey(
-                        name: "FK_Anotacion_Mascotas_MascotaId",
+                        name: "FK_Anotaciones_Mascotas_MascotaId",
                         column: x => x.MascotaId,
                         principalTable: "Mascotas",
                         principalColumn: "MascotaId",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Anotacion_Personas_auxiliarId",
+                        name: "FK_Anotaciones_Personas_auxiliarId",
                         column: x => x.auxiliarId,
                         principalTable: "Personas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Anotacion_Personas_ownerId",
+                        name: "FK_Anotaciones_Personas_ownerId",
                         column: x => x.ownerId,
                         principalTable: "Personas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Anotacion_Personas_veterinarioId",
+                        name: "FK_Anotaciones_Personas_veterinarioId",
                         column: x => x.veterinarioId,
                         principalTable: "Personas",
                         principalColumn: "Id",
@@ -120,10 +149,45 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 {
                     table.PrimaryKey("PK_Chequeos", x => x.ChequeoId);
                     table.ForeignKey(
-                        name: "FK_Chequeos_Anotacion_AnotacionId",
+                        name: "FK_Chequeos_Anotaciones_AnotacionId",
                         column: x => x.AnotacionId,
-                        principalTable: "Anotacion",
+                        principalTable: "Anotaciones",
                         principalColumn: "AnotacionId",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Diagnosticos",
+                columns: table => new
+                {
+                    DiagnosticoId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Receta = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Gravedad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MascotaId = table.Column<int>(type: "int", nullable: true),
+                    AnotacionId = table.Column<int>(type: "int", nullable: true),
+                    ChequeoId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Diagnosticos", x => x.DiagnosticoId);
+                    table.ForeignKey(
+                        name: "FK_Diagnosticos_Anotaciones_AnotacionId",
+                        column: x => x.AnotacionId,
+                        principalTable: "Anotaciones",
+                        principalColumn: "AnotacionId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Diagnosticos_Chequeos_ChequeoId",
+                        column: x => x.ChequeoId,
+                        principalTable: "Chequeos",
+                        principalColumn: "ChequeoId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Diagnosticos_Mascotas_MascotaId",
+                        column: x => x.MascotaId,
+                        principalTable: "Mascotas",
+                        principalColumn: "MascotaId",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -134,6 +198,7 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     HistoriaClinicaId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     AnotacionId = table.Column<int>(type: "int", nullable: true),
+                    ChequeoId = table.Column<int>(type: "int", nullable: true),
                     MascotaId = table.Column<int>(type: "int", nullable: true),
                     ownerId = table.Column<int>(type: "int", nullable: true),
                     veterinarioId = table.Column<int>(type: "int", nullable: true),
@@ -143,10 +208,16 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 {
                     table.PrimaryKey("PK_HistoriaClinicas", x => x.HistoriaClinicaId);
                     table.ForeignKey(
-                        name: "FK_HistoriaClinicas_Anotacion_AnotacionId",
+                        name: "FK_HistoriaClinicas_Anotaciones_AnotacionId",
                         column: x => x.AnotacionId,
-                        principalTable: "Anotacion",
+                        principalTable: "Anotaciones",
                         principalColumn: "AnotacionId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_HistoriaClinicas_Chequeos_ChequeoId",
+                        column: x => x.ChequeoId,
+                        principalTable: "Chequeos",
+                        principalColumn: "ChequeoId",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_HistoriaClinicas_Mascotas_MascotaId",
@@ -175,29 +246,54 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Anotacion_auxiliarId",
-                table: "Anotacion",
+                name: "IX_Agendas_AuxiliarId",
+                table: "Agendas",
+                column: "AuxiliarId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Agendas_VeterinarioId",
+                table: "Agendas",
+                column: "VeterinarioId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Anotaciones_auxiliarId",
+                table: "Anotaciones",
                 column: "auxiliarId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Anotacion_MascotaId",
-                table: "Anotacion",
+                name: "IX_Anotaciones_MascotaId",
+                table: "Anotaciones",
                 column: "MascotaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Anotacion_ownerId",
-                table: "Anotacion",
+                name: "IX_Anotaciones_ownerId",
+                table: "Anotaciones",
                 column: "ownerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Anotacion_veterinarioId",
-                table: "Anotacion",
+                name: "IX_Anotaciones_veterinarioId",
+                table: "Anotaciones",
                 column: "veterinarioId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Chequeos_AnotacionId",
                 table: "Chequeos",
                 column: "AnotacionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Diagnosticos_AnotacionId",
+                table: "Diagnosticos",
+                column: "AnotacionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Diagnosticos_ChequeoId",
+                table: "Diagnosticos",
+                column: "ChequeoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Diagnosticos_MascotaId",
+                table: "Diagnosticos",
+                column: "MascotaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_HistoriaClinicas_AnotacionId",
@@ -208,6 +304,11 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 name: "IX_HistoriaClinicas_auxiliarId",
                 table: "HistoriaClinicas",
                 column: "auxiliarId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HistoriaClinicas_ChequeoId",
+                table: "HistoriaClinicas",
+                column: "ChequeoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_HistoriaClinicas_HistoriaClinicaId",
@@ -251,13 +352,19 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Chequeos");
+                name: "Agendas");
+
+            migrationBuilder.DropTable(
+                name: "Diagnosticos");
 
             migrationBuilder.DropTable(
                 name: "HistoriaClinicas");
 
             migrationBuilder.DropTable(
-                name: "Anotacion");
+                name: "Chequeos");
+
+            migrationBuilder.DropTable(
+                name: "Anotaciones");
 
             migrationBuilder.DropTable(
                 name: "Personas");

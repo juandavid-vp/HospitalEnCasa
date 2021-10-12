@@ -1,0 +1,40 @@
+﻿@page
+@model ClinicaVeterinaria.App.FrontEnd.Pages.ListVeterinariosModel
+@{
+}
+<h1>Gestionar médicos</h1>
+<p>En está pagina podrás gestionar los veterinarios</p>
+<a class="btn btn-primary table-btn" asp-page="./AddVeterinario">Agregar veterinario</a>
+<table class="table table-dark">
+<tr>
+    <th scope="col">Id</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">FechaNacimiento</th>
+    <th scope="col">Cedula</th>
+    <th scope="col">NumeroTelefono</th>
+    <th scope="col">CorreoElectronico</th>
+    <th scope="col">HorarioLaboral</th>
+    <th scope="col">LicenciaProfesional</th>
+    <th scope="col">Especializacion</th>
+    <th scope="col">EstadoVeterinario</th>
+</tr>
+@foreach( var veterinario in Model.Veterinarios)
+{
+    <tr>
+        <td>@veterinario.Id</td>
+        <td>@veterinario.Nombre</td>
+        <td>@veterinario.FechaNacimiento</td>
+        <td>@veterinario.Cedula</td>
+        <td>@veterinario.NumeroTelefono</td>
+        <td>@veterinario.CorreoElectronico</td>
+        <td>@veterinario.HorarioLaboral</td>
+        <td>@veterinario.LicenciaProfesional</td>
+        <td>@veterinario.Especializacion</td>
+        <td>@veterinario.EstadoVeterinario</td>
+        <td><a class="btn btn-primary table-btn" asp-page="./DetailVeterinario" asp-route-Cedula="@veterinario.Cedula">Detalles</a><br>
+        <a class="btn btn-primary table-btn" asp-page="./EditVeterinario" asp-route-Cedula="@veterinario.Cedula">Editar</a><br>
+        <a class="btn btn-primary table-btn" asp-page="./RemoveVeterinario" asp-route-Cedula="@veterinario.Cedula">Eliminar</a>
+        <br>
+    </tr>
+}
+</table>

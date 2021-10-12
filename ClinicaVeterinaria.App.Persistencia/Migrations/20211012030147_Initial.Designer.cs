@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClinicaVeterinaria.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20211010182805_Initial")]
+    [Migration("20211012030147_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,37 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
+
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Agenda", b =>
+                {
+                    b.Property<int>("AgendaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("AuxiliarId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Dia")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Hora")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("VeterinarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AgendaId");
+
+                    b.HasIndex("AuxiliarId");
+
+                    b.HasIndex("VeterinarioId");
+
+                    b.ToTable("Agendas");
+                });
 
             modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Anotacion", b =>
                 {
@@ -56,7 +87,7 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
 
                     b.HasIndex("veterinarioId");
 
-                    b.ToTable("Anotacion");
+                    b.ToTable("Anotaciones");
                 });
 
             modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Chequeo", b =>
@@ -94,6 +125,39 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.ToTable("Chequeos");
                 });
 
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Diagnostico", b =>
+                {
+                    b.Property<int>("DiagnosticoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("AnotacionId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ChequeoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Gravedad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("MascotaId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Receta")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("DiagnosticoId");
+
+                    b.HasIndex("AnotacionId");
+
+                    b.HasIndex("ChequeoId");
+
+                    b.HasIndex("MascotaId");
+
+                    b.ToTable("Diagnosticos");
+                });
+
             modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.HistoriaClinica", b =>
                 {
                     b.Property<int>("HistoriaClinicaId")
@@ -102,6 +166,9 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .UseIdentityColumn();
 
                     b.Property<int?>("AnotacionId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ChequeoId")
                         .HasColumnType("int");
 
                     b.Property<int?>("MascotaId")
@@ -119,6 +186,8 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.HasKey("HistoriaClinicaId");
 
                     b.HasIndex("AnotacionId");
+
+                    b.HasIndex("ChequeoId");
 
                     b.HasIndex("HistoriaClinicaId")
                         .IsUnique();
@@ -263,6 +332,21 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.HasDiscriminator().HasValue("Veterinario");
                 });
 
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Agenda", b =>
+                {
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Auxiliar", "Auxiliar")
+                        .WithMany()
+                        .HasForeignKey("AuxiliarId");
+
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Veterinario", "Veterinario")
+                        .WithMany()
+                        .HasForeignKey("VeterinarioId");
+
+                    b.Navigation("Auxiliar");
+
+                    b.Navigation("Veterinario");
+                });
+
             modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Anotacion", b =>
                 {
                     b.HasOne("ClinicaVeterinaria.App.Dominio.Mascota", "mascota")
@@ -299,11 +383,36 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.Navigation("anotacion");
                 });
 
+            modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.Diagnostico", b =>
+                {
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Anotacion", "anotacion")
+                        .WithMany()
+                        .HasForeignKey("AnotacionId");
+
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Chequeo", "chequeo")
+                        .WithMany()
+                        .HasForeignKey("ChequeoId");
+
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Mascota", "mascota")
+                        .WithMany()
+                        .HasForeignKey("MascotaId");
+
+                    b.Navigation("anotacion");
+
+                    b.Navigation("chequeo");
+
+                    b.Navigation("mascota");
+                });
+
             modelBuilder.Entity("ClinicaVeterinaria.App.Dominio.HistoriaClinica", b =>
                 {
                     b.HasOne("ClinicaVeterinaria.App.Dominio.Anotacion", "anotacion")
                         .WithMany()
                         .HasForeignKey("AnotacionId");
+
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Chequeo", "chequeo")
+                        .WithMany()
+                        .HasForeignKey("ChequeoId");
 
                     b.HasOne("ClinicaVeterinaria.App.Dominio.Mascota", "mascota")
                         .WithMany()
@@ -324,6 +433,8 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.Navigation("anotacion");
 
                     b.Navigation("auxiliar");
+
+                    b.Navigation("chequeo");
 
                     b.Navigation("mascota");
 

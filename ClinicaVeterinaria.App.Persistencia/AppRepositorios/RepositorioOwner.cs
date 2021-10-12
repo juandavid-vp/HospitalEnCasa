@@ -6,59 +6,56 @@ namespace ClinicaVeterinaria.App.Persistencia
 {
     public class RepositorioOwner : IRepositorioOwner
     {
-        ///<Summary>
-        /// Referencia al contexto del Dueño
-        ///</Summary>
-
         private readonly AppContext _appContext;
-        ///<Summary>
-        /// Metodo constructor utiliza
-        /// Inyeccion de dependencias para usar el contexto
-        ///</Summary>
-        ///<param name="appContext"><param/>//
-
         public RepositorioOwner(AppContext appContext)
         {
-            _appContext=appContext;
+            this._appContext = appContext;
         }
-        public Owner AddOwner(Owner owner)
+        public Owner addOwners(Owner owner)
         {
-            var ownerAdicionado= _appContext.Owners.Add(owner);
+            Owner newOwner = _appContext.Add(owner).Entity;
             _appContext.SaveChanges();
-            return ownerAdicionado.Entity;
+            return newOwner;
         }
-        public void DeleteOwner(int idOwner)
+
+        public Owner editOwners(Owner owner)
         {
-            var ownerEncontrado=_appContext.Owners.FirstOrDefault(p => p.Id==idOwner);
-            if(ownerEncontrado==null)
-            return;
-            _appContext.Owners.Remove(ownerEncontrado);
-            _appContext.SaveChanges();
-        }
-        public IEnumerable<Owner> GetAllOwners()
-        {
-            return _appContext.Owners;
-        }
-        public Owner GetOwner(int idOwner)
-        {
-            return _appContext.Owners.FirstOrDefault(p => p.Id==idOwner);
-        }
-        public Owner UpdateOwner(Owner owner)
-        {
-        var ownerEncontrado=_appContext.Owners.FirstOrDefault(p => p.Id == owner.Id);
+            var ownerEncontrado=_appContext.Owners.FirstOrDefault(o => o.Id == owner.Id);
             if(ownerEncontrado!=null)
             {
                 ownerEncontrado.Nombre=owner.Nombre;
+                ownerEncontrado.Cedula=owner.Cedula;
                 ownerEncontrado.Ciudad=owner.Ciudad;
                 ownerEncontrado.CorreoElectronico=owner.CorreoElectronico;
                 ownerEncontrado.Direccion=owner.Direccion;
                 ownerEncontrado.NumeroTelefono=owner.NumeroTelefono;
                 ownerEncontrado.FechaNacimiento=owner.FechaNacimiento;
-               
-
+                ownerEncontrado.mascota = owner.mascota;
                 _appContext.SaveChanges();
             }
             return ownerEncontrado;
+        }
+
+        public IEnumerable<Owner> GetAllOwners()
+        {
+            return _appContext.Owners;
+        }
+
+        public Owner getOwners(int Cedula)
+        {
+            Owner ownerEncontrado = _appContext.Owners.FirstOrDefault(o => o.Cedula == Cedula);
+            return ownerEncontrado;
+
+        }
+
+        public void removeOwners(int Cedula)
+        {
+            Owner ownerEncontrado = _appContext.Owners.FirstOrDefault(o => o.Cedula == Cedula);
+            if(ownerEncontrado != null)
+            {
+                _appContext.Owners.Remove(ownerEncontrado);
+                _appContext.SaveChanges();
+            }
         }
     }
 }

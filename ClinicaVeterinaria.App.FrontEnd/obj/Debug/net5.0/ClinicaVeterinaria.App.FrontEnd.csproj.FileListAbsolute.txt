@@ -74,3 +74,7 @@ C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontE
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Mascotas\AddMascota.cshtml.g.cs
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Mascotas\DetailMascota.cshtml.g.cs
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Mascotas\EditMascota.cshtml.g.cs
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Veterinarios\AddVeterinario.cshtml.g.cs
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Veterinarios\DetailVeterinario.cshtml.g.cs
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Veterinarios\EditVeterinario.cshtml.g.cs
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Veterinarios\ListVeterinarios.cshtml.g.cs

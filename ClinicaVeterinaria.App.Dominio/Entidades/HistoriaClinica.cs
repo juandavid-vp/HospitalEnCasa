@@ -7,6 +7,7 @@ namespace ClinicaVeterinaria.App.Dominio
     {
         public int HistoriaClinicaId { get; set; } 
         public Anotacion anotacion { get; set; }
+        public Chequeo  chequeo { get; set; }
         public Mascota mascota { get; set; }
         public Owner  owner { get; set; }
         public Veterinario veterinario { get; set; }

@@ -9,6 +9,6 @@ namespace ClinicaVeterinaria.App.Persistencia
         HistoriaClinica getHistoriaClinicas(int HistoriaId);
         HistoriaClinica editHistoriaClinicas(HistoriaClinica historiaClinica);
         HistoriaClinica addHistoriaClinicas(HistoriaClinica historiaClinica);
-        void removeHistoriaClinicas(HistoriaClinica historiaClinica);
+        void removeHistoriaClinicas(int HistoriaId);
     }
 }

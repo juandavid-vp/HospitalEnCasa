@@ -9,6 +9,6 @@ namespace ClinicaVeterinaria.App.Persistencia
         Chequeo getHistoriaClinicas(int ChequeoId);
         Chequeo editChequeos(Chequeo chequeo);
         Chequeo addChequeos(Chequeo chequeo);
-        void removeHistoriaClinicas(Chequeo chequeo);
+        void removeHistoriaClinicas(int ChequeoId);
     }
 }

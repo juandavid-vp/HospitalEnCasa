@@ -7,7 +7,7 @@ using ClinicaVeterinaria.App.Persistencia;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 //using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore;
+//using Microsoft.AspNetCore;
 
 namespace ClinicaVeterinaria.App.FrontEnd.Pages
 {

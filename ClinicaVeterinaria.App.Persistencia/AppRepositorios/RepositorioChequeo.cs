@@ -30,7 +30,7 @@ namespace ClinicaVeterinaria.App.Persistencia
             throw new System.NotImplementedException();
         }
 
-        public void removeHistoriaClinicas(Chequeo chequeo)
+        public void removeHistoriaClinicas(int ChequeoId)
         {
             throw new System.NotImplementedException();
         }
