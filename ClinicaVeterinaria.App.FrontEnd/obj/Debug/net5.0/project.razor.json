@@ -15639,11 +15639,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Agendas\\DetailAgenda.cshtml",
-      "TargetPath": "Pages\\Agendas\\DetailAgenda.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -15714,6 +15709,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Agendas\\DailyAgenda.cshtml",
+      "TargetPath": "Pages\\Agendas\\DailyAgenda.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Auxiliares\\ListAuxiliares.cshtml",
       "TargetPath": "Pages\\Auxiliares\\ListAuxiliares.cshtml",
       "FileKind": "mvc"
@@ -15734,11 +15734,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Agendas\\EditAgenda.cshtml",
-      "TargetPath": "Pages\\Agendas\\EditAgenda.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Index.cshtml",
       "TargetPath": "Pages\\Index.cshtml",
       "FileKind": "mvc"
@@ -15751,6 +15746,11 @@
     {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Owners\\AddOwner.cshtml",
       "TargetPath": "Pages\\Owners\\AddOwner.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\Agendas\\RangeAgendas.cshtml",
+      "TargetPath": "Pages\\Agendas\\RangeAgendas.cshtml",
       "FileKind": "mvc"
     },
     {

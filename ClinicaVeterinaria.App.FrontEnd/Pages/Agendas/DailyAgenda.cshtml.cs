@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ClinicaVeterinaria.App.FrontEnd
 {
-    public class EditAgendaModel : PageModel
+    public class DailyAgendaModel : PageModel
     {
         public void OnGet()
         {

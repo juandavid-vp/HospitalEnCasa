@@ -13,6 +13,9 @@ namespace ClinicaVeterinaria.App.FrontEnd.Pages
     public class ListAgendasModel : PageModel
     {
         private readonly IRepositorioAgenda repositorioAgenda;
+        public Agenda agenda { get; set; }
+        public Mascota mascota { get; set; }
+        public Veterinario veterinario { get; set; }
 
         public IEnumerable<Agenda> Agendas;
         [DataType(DataType.Date),Range(typeof(DateTime), "1/1/2021", "31/12/2025",
