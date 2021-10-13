@@ -46,7 +46,7 @@ namespace ClinicaVeterinaria.App.FrontEnd
             services.AddSingleton<IRepositorioMascota>(new RepositorioMascota(new Persistencia.AppContext())); 
             services.AddSingleton<IRepositorioAuxiliar>(new RepositorioAuxiliar(new Persistencia.AppContext()));
             services.AddSingleton<IRepositorioOwner>(new RepositorioOwner(new Persistencia.AppContext()));
-            services.AddSingleton<IRepositorioDiagnostico>(new RepositorioDiagnostico(new Persistencia.AppContext()));
+            //services.AddSingleton<IRepositorioDiagnostico>(new RepositorioDiagnostico(new Persistencia.AppContext()));
             services.AddSingleton<IRepositorioHistoriaClinica>(new RepositorioHistoriaClinica(new Persistencia.AppContext()));
             services.AddSingleton<IRepositorioAnotacion>(new RepositorioAnotacion(new Persistencia.AppContext()));
             services.AddSingleton<IRepositorioAgenda>(new RepositorioAgenda(new Persistencia.AppContext()));

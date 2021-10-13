@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "j3QKM6h9JzNKtIsGEbs3W4BBqPLtwS5jFWmMvCENhq8ouCbZ3+CXqNbKKSmm4YL/RHe76EcOM8+nyozpXvMRRQ==",
+  "dgSpecHash": "pjgPxXBvKZlIYVUF2T6wSNQdU0OqhO7s28yd5UeY3mQOKASPeJTOnI/grTGhllyaIZLJWDYXxLCyYtDHdaJG5w==",
   "success": true,
   "projectFilePath": "C:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.Dominio\\ClinicaVeterinaria.App.Dominio.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ya-ke\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
