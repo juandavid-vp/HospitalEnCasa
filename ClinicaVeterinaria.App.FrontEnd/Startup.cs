@@ -24,11 +24,33 @@ namespace ClinicaVeterinaria.App.FrontEnd
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {       
+            services.AddRazorPages(
+                options => 
+                {
+                    options.Conventions.AuthorizeFolder("/Anotaciones");
+                    options.Conventions.AuthorizeFolder("/Agendas");
+                    options.Conventions.AuthorizeFolder("/Auxiliares");
+                    options.Conventions.AuthorizeFolder("/Owners");
+                    options.Conventions.AuthorizeFolder("/HistoriasClinicas");
+                    options.Conventions.AuthorizeFolder("/Veterinarios");
+                    options.Conventions.AuthorizeFolder("/Mascotas");
+                    //options.Conventions.AuthorizePage("/Index");
+                    options.Conventions.AllowAnonymousToPage("/Privacy");
+                } 
+                );
+
             //AppContext _appcontext = new AppContext();
             services.AddRazorPages();
             services.AddSingleton<IRepositorioVeterinario>(new RepositorioVeterinario(new Persistencia.AppContext()));  
             services.AddSingleton<IRepositorioMascota>(new RepositorioMascota(new Persistencia.AppContext())); 
+            services.AddSingleton<IRepositorioAuxiliar>(new RepositorioAuxiliar(new Persistencia.AppContext()));
+            services.AddSingleton<IRepositorioOwner>(new RepositorioOwner(new Persistencia.AppContext()));
+            services.AddSingleton<IRepositorioDiagnostico>(new RepositorioDiagnostico(new Persistencia.AppContext()));
+            services.AddSingleton<IRepositorioHistoriaClinica>(new RepositorioHistoriaClinica(new Persistencia.AppContext()));
+            services.AddSingleton<IRepositorioAnotacion>(new RepositorioAnotacion(new Persistencia.AppContext()));
+            services.AddSingleton<IRepositorioAgenda>(new RepositorioAgenda(new Persistencia.AppContext()));
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
