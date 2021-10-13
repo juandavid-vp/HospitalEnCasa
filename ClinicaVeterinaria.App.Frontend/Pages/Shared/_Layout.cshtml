@@ -3,31 +3,41 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ClinicaVeterinaria.App.Frontend</title>
+    <title>@ViewData["Title"] - Vet Home</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/jquery/jquery.min.js"></script>
+    <script src="~/bootstrap/dist/js/bootstrap.min.js" integrity=""></script>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">VET HOME - Clinica Veterinaria</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">CLINICA VETERINARIA</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Mascota/AddMascota">About us</a>
-                        </li>                  
+                            <a class="nav-link text-dark" asp-area=""asp-page="/Home/Bienvenida">Vet Home</a>
+                        </li>   
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Mascotas/AddMascota"> Login </a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Mascotas/AddMascotas">About Mascotas</a>
+                        </li>   
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Auxiliares/AddAuxiliares"> About Auxiliares </a>
+                        </li>               
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Veterinarios/AddVeterinarios"> About veterinarios </a>
                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Registrarse/AddOwner"> Register </a>
+                        <li class="nav-item" >
+                            <a href="/Identity/Account/Login" class="btn btn-primary">Login</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a href="/Identity/Account/Register" class="btn btn-primary">Registrate</a>
+                        </li>      
                     </ul>
                 </div>
             </div>

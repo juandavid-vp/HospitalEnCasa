@@ -1,0 +1,63 @@
+﻿@page
+@model ClinicaVeterinaria.App.FrontEnd.Pages.AddAuxiliaresModel
+@using ClinicaVeterinaria.App.Dominio
+@{
+}
+<h1>Agregar Auxiliar</h1>
+<form method="post" class="mt-3">
+    <div class="form-group row">
+        <label asp-for="auxiliar.NumeroIdentificacion" class="col-sm-2">Cedula</label>
+        <input asp-for="auxiliar.NumeroIdentificacion" class="form-control" >
+        <span asp-validation-for="auxiliar.NumeroIdentificacion" class="text-danger"></span>
+    </div>
+    <div class="form-group row">
+        <label asp-for="auxiliar.Nombre" class="col-sm-2">Nombre</label>
+        <input asp-for="auxiliar.Nombre" class="form-control">
+        <span asp-validation-for="auxiliar.Nombre" class="text-danger"></span>
+    </div>   
+    <div class="form-group row">
+        <label asp-for="auxiliar.FechaNacimiento" class="col-sm-2">Fecha Nacimiento</label>
+        <input asp-for="auxiliar.FechaNacimiento" class="form-control">
+        <span asp-validation-for="auxiliar.FechaNacimiento" class="text-danger"></span>
+    </div>  
+    <div class="form-group row">
+        <label asp-for="auxiliar.NumeroTelefono" class="col-sm-2">Numero Telefono</label>
+        <input asp-for="auxiliar.NumeroTelefono" class="form-control">
+        <span asp-validation-for="auxiliar.NumeroTelefono" class="text-danger"></span>
+    </div>  
+    <div class="form-group row">
+        <label asp-for="auxiliar.CorreoElectronico" class="col-sm-2">Correo Electronico</label>
+        <input asp-for="auxiliar.CorreoElectronico" class="form-control" >
+        <span asp-validation-for="auxiliar.CorreoElectronico" class="text-danger"></span>
+    </div>  
+     
+    <div class="form-group row">
+        <label asp-for="auxiliar.LicenciaProfesional" class="col-sm-2">Licencia Profesional</label>
+        <input asp-for="auxiliar.LicenciaProfesional" class="form-control" >   
+        <span asp-validation-for="auxiliar.LicenciaProfesional" class="text-danger"></span>
+    </div>
+   
+    <div class="form-group row">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a asp-page="./ListAuxiliar" class="btn btn-primary">Cancelar</a>
+    </div>
+
+    <!-- <div class="form-group row">
+        <label asp-for="mascota.descripcion" class="col-sm-2">Descripción</label>
+        <div class="col-sm-10">
+            <select asp-for="mascota.descripcion" asp-items="Html.GetEnumSelectList<Genero>()"></select>   
+        </div>
+        <span class="text-danger" asp-validation-for="medico.genero"></span>
+    </div>  -->
+    <!-- <div class="form-group row">
+        <label asp-for="medico.username" class="col-sm-2">Username</label>
+        <input asp-for="medico.username" class="form-control" >
+        <span asp-validation-for="medico.username" class="text-danger"></span>
+    </div> --> 
+   <!-- <div class="form-group row">
+        <label asp-for="medico.password" class="col-sm-2">Contraseña</label>
+        <input asp-for="medico.password" class="form-control" >
+        <span asp-validation-for="medico.password" class="text-danger"></span>
+    </div> --> 
+
+</form>

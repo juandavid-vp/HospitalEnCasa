@@ -26,10 +26,26 @@ namespace ClinicaVeterinaria.App.Frontend
         public void ConfigureServices(IServiceCollection services)
         {
             //Guide #services.AddSingleton<IRepositorioMedico>(new RepositorioMedico(_contexto));
-            services.AddRazorPages();
-            Persistencia.AppContext _Appcontext = new Persistencia.AppContext();    
+            services.AddRazorPages(
+                options => {
+                    options.Conventions.AuthorizeFolder("/Auxiliares");
+                    options.Conventions.AuthorizeFolder("/Propietarios");
+                    options.Conventions.AuthorizeFolder("/Veterinarios");
+                    options.Conventions.AuthorizeFolder("/Mascotas");
+                    //options.Conventions.AuthorizeFolder("/Historia");
+                    //options.Conventions.AuthorizeFolder("/Medicos");
+                    //options.Conventions.AuthorizeFolder("/Pacientes");
+                    //options.Conventions.AuthorizePage("/Index");
+                    options.Conventions.AllowAnonymousToPage("/Privacy");
+                }
+            );
+            Persistencia.AppContext _Appcontext = new Persistencia.AppContext();
+
             services.AddSingleton<IRepositorioOwner>(new RepositorioOwner(_Appcontext));
             services.AddSingleton<IRepositorioMascota>(new RepositorioMascota(_Appcontext));
+            services.AddSingleton<IRepositorioVeterinario>(new RepositorioVeterinario(_Appcontext));
+            services.AddSingleton<IRepositorioAuxiliar>(new RepositorioAuxiliar(_Appcontext));
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,11 +66,15 @@ namespace ClinicaVeterinaria.App.Frontend
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=conference}/{action=index}/{id?}"
+                );
                 endpoints.MapRazorPages();
             });
         }
