@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ClinicaVeterinaria.App.FrontEnd
 {
-    public class AddAgendaModel : PageModel
+    public class addAgendaModel : PageModel
     {
         private readonly IRepositorioAgenda repositorioAgenda;
         private readonly IRepositorioVeterinario repositorioVeterinario;
@@ -22,12 +22,12 @@ namespace ClinicaVeterinaria.App.FrontEnd
         public SelectList Veterinario { get; set; }
         public SelectList Mascota { get; set; }
 
-        public int cedulaVeterinario { get; set; }
-        public int mascotaIdMascota { get; set; }
+        public int CedulaVeterinario { get; set; }
+        public int MascotaIdMascota { get; set; }
 
         public string mensaje {get; set; }
 
-        public AddAgendaModel(IRepositorioAgenda repositorioAgenda , IRepositorioVeterinario repositorioVeterinario ,
+        public addAgendaModel(IRepositorioAgenda repositorioAgenda , IRepositorioVeterinario repositorioVeterinario ,
          IRepositorioMascota repositorioMascota)
         {
             this.repositorioMascota = repositorioMascota;

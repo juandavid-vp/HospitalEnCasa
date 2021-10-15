@@ -13,13 +13,13 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cedula = table.Column<int>(type: "int", nullable: false),
                     FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    NumeroTelefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NumeroTelefono = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CorreoElectronico = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Username = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Username = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HorarioLaboral = table.Column<DateTime>(type: "datetime2", nullable: true),
                     LicenciaProfesional = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -38,46 +38,17 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Agendas",
-                columns: table => new
-                {
-                    AgendaId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    VeterinarioId = table.Column<int>(type: "int", nullable: true),
-                    AuxiliarId = table.Column<int>(type: "int", nullable: true),
-                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Dia = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Hora = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Agendas", x => x.AgendaId);
-                    table.ForeignKey(
-                        name: "FK_Agendas_Personas_AuxiliarId",
-                        column: x => x.AuxiliarId,
-                        principalTable: "Personas",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Agendas_Personas_VeterinarioId",
-                        column: x => x.VeterinarioId,
-                        principalTable: "Personas",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Mascotas",
                 columns: table => new
                 {
                     MascotaId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    NombreM = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NombreM = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Peso = table.Column<float>(type: "real", nullable: false),
                     Nacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Especie = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Color = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Descripción = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Especie = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Color = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Descripción = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ownerId = table.Column<int>(type: "int", nullable: true),
                     auxiliarId = table.Column<int>(type: "int", nullable: true),
@@ -101,6 +72,42 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     table.ForeignKey(
                         name: "FK_Mascotas_Personas_veterinarioId",
                         column: x => x.veterinarioId,
+                        principalTable: "Personas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Agendas",
+                columns: table => new
+                {
+                    AgendaId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    VeterinarioId = table.Column<int>(type: "int", nullable: true),
+                    AuxiliarId = table.Column<int>(type: "int", nullable: true),
+                    MascotaId = table.Column<int>(type: "int", nullable: true),
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Dia = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Hora = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Agendas", x => x.AgendaId);
+                    table.ForeignKey(
+                        name: "FK_Agendas_Mascotas_MascotaId",
+                        column: x => x.MascotaId,
+                        principalTable: "Mascotas",
+                        principalColumn: "MascotaId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Agendas_Personas_AuxiliarId",
+                        column: x => x.AuxiliarId,
+                        principalTable: "Personas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Agendas_Personas_VeterinarioId",
+                        column: x => x.VeterinarioId,
                         principalTable: "Personas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -156,10 +163,10 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Pulso = table.Column<int>(type: "int", nullable: false),
                     PresionArterial = table.Column<int>(type: "int", nullable: false),
-                    Consiente = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TipoSangre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Temperatura = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Observaciones = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Consiente = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TipoSangre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Temperatura = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Observaciones = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AnotacionId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -179,8 +186,8 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 {
                     DiagnosticoId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Receta = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Gravedad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Receta = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Gravedad = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MascotaId = table.Column<int>(type: "int", nullable: true),
                     AnotacionId = table.Column<int>(type: "int", nullable: true),
                     ChequeoId = table.Column<int>(type: "int", nullable: true)
@@ -266,6 +273,11 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 name: "IX_Agendas_AuxiliarId",
                 table: "Agendas",
                 column: "AuxiliarId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Agendas_MascotaId",
+                table: "Agendas",
+                column: "MascotaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Agendas_VeterinarioId",
@@ -367,8 +379,7 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                 name: "IX_Personas_Username",
                 table: "Personas",
                 column: "Username",
-                unique: true,
-                filter: "[Username] IS NOT NULL");
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

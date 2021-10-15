@@ -1,27 +1,28 @@
 ﻿@page
-@model ClinicaVeterinaria.App.FrontEnd.ListAgendasModel
+@model ClinicaVeterinaria.App.FrontEnd.Pages.ListAgendasModel
 @using ClinicaVeterinaria.App.Dominio
+@using ClinicaVeterinaria.App.Persistencia
 @{
 }
-<h1>Gestionar Agendas</h1>
+<h1>Gestionar Agenda</h1>
 <h2>Agregar Agenda</h2>
-<a class="btn btn-primary" asp-page="./AddAgenda">Añadir cita</a>
-<h2>Consultar por dia</h2>
+<a class="btn btn-primary" asp-page="./AddAgenda">Añadir Agenda</a>
+<h2>Consultar por Dia</h2>
 <form method="get" class="mt-3" action="./DailyAgenda">
     <div class="form-group row">
-        <label asp-for="Dia" class="form-control">Dia</label>
-        <input asp-for="Dia" class="form-control" value=@DateTime.Today.ToString("yyyy-MM-dd")>
+        <label asp-for="Agenda.Dia" class="form-control">Dia</label>
+        <input asp-for="Agenda.Dia" class="form-control" value=@DateTime.Today.ToString("yyyy-MM-dd")>
     </div>
     <button type="submit" class="btn btn-primary">Consultar</button>
 </form>
 <h2>Consultar por rango de días</h2>
-<form method="get" class="mt-3" action="./RangeCitas">
+<form method="get" class="mt-3" action="./RangeAgendas">
     <div class="form-group row">
-        <label asp-for="DiaInicial" class="form-control">Dia Inicial</label>
+        <label asp-for="DiaInicial" class="form-control">DiaInicial</label>
         <input asp-for="DiaInicial" class="form-control" value=@DateTime.Today.AddDays(-10).ToString("yyyy-MM-dd")>
     </div>
     <div class="form-group row">
-        <label asp-for="DiaFinal" class="form-control">Dia Final</label>
+        <label asp-for="DiaFinal" class="form-control">DiaFinal</label>
         <input asp-for="DiaFinal" class="form-control" value=@DateTime.Today.ToString("yyyy-MM-dd")>
     </div>
     <button type="submit" class="btn btn-primary">Consultar</button>
@@ -35,7 +36,8 @@
         <th>Dia</th>
         <th>Hora</th>
     </tr>
-    @foreach(var Agenda in @Model.agendas){
+    @foreach(var Agenda in @Model.Agendas)
+    {
         <tr>
             <td>@Agenda.Mascota.NombreM</td>
             <td>@Agenda.Veterinario.Nombre</td>

@@ -12,6 +12,7 @@ namespace ClinicaVeterinaria.App.Dominio
         public Mascota Mascota { get; set; }
         [Required]
         public String Descripcion { get; set; }
+        
         [Required(ErrorMessage = "El día es obligatorio."),DataType(DataType.Date),Range(typeof(DateTime), "1/1/2021", "31/12/2025",
         ErrorMessage = "El valor {0} debe estar {1} y {2}")]
         public DateTime Dia { get; set; }

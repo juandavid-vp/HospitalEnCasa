@@ -15629,11 +15629,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\PagesAgendas\\ListAgendas.cshtml",
-      "TargetPath": "PagesAgendas\\ListAgendas.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\ya-ke\\OneDrive\\Documentos\\GitHub\\Vethouse\\ClinicaVeterinaria.App.FrontEnd\\Pages\\HistoriaClinicas\\EditHistoriaClinica.cshtml",
       "TargetPath": "Pages\\HistoriaClinicas\\EditHistoriaClinica.cshtml",
       "FileKind": "mvc"

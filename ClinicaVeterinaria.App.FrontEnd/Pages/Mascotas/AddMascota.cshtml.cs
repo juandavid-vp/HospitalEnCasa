@@ -68,40 +68,6 @@ namespace ClinicaVeterinaria.App.FrontEnd.Pages
         {
             mascota = new Mascota();
         }
-        public async Task <IActionResult> OnPostAsync (Mascota mascota, int CedulaVeterinario, int CedulaAuxiliar, int CedulaOwner)
-        {         
-            const string returnUrl = "./Pacientes/ListPaciente";
-            if (ModelState.IsValid)
-            {
-                if(result.Succeeded)
-                {
-                    Veterinario veterinario = repositorioVeterinario.getVeterinarios(CedulaVeterinario);
-                    Auxiliar auxiliar = repositorioAuxiliar.getAllAuxiliares(CedulaAuxiliar);
-                    Owner owner = repositorioOwner.getOwners(CedulaAuxiliar);
-
-                    Mascota newMascota =  new Mascota()
-                    {
-                        MascotaId= mascota.MascotaId,
-                        NombreM = mascota.NombreM,
-                        Nacimiento = mascota.Nacimiento,
-                        Descripción = mascota.Descripción,
-                        Peso = mascota.Peso,
-                        Especie = mascota.Especie,
-                        Color = mascota.Color,
-                        owner = mascota.owner,
-                        veterinario = mascota.veterinario,
-                        auxiliar = mascota.auxiliar,
-                        Password = mascota.Password,
-                    };
-                    repositorioMascota.addMascotas(newMascota);
-
-                }
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
-            }
-             return Page();
-        }
+    
     }
 }

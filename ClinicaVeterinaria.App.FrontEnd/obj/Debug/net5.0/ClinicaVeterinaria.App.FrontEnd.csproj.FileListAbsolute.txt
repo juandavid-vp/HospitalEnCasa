@@ -78,10 +78,7 @@ C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontE
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Veterinarios\DetailVeterinario.cshtml.g.cs
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Veterinarios\EditVeterinario.cshtml.g.cs
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Veterinarios\ListVeterinarios.cshtml.g.cs
-C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\PagesAgendas\ListAgendas.cshtml.g.cs
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Agendas\AddAgenda.cshtml.g.cs
-C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Agendas\DetailAgenda.cshtml.g.cs
-C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Agendas\EditAgenda.cshtml.g.cs
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Anotaciones\AddAnotacion.cshtml.g.cs
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Anotaciones\DetailAnotacion.cshtml.g.cs
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Anotaciones\EditAnotacion.cshtml.g.cs
@@ -106,3 +103,6 @@ C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontE
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Owners\DetailOwner.cshtml.g.cs
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Owners\EditOwner.cshtml.g.cs
 C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Owners\ListOwners.cshtml.g.cs
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Agendas\DailyAgenda.cshtml.g.cs
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Agendas\ListAgendas.cshtml.g.cs
+C:\Users\ya-ke\OneDrive\Documentos\GitHub\Vethouse\ClinicaVeterinaria.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Agendas\RangeAgendas.cshtml.g.cs

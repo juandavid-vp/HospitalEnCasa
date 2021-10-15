@@ -1,5 +1,5 @@
 ﻿@page
-@model ClinicaVeterinaria.App.FrontEnd.AddAgendaModel
+@model ClinicaVeterinaria.App.FrontEnd.addAgendaModel
 @using ClinicaVeterinaria.App.Dominio
 @{
 }
@@ -10,11 +10,11 @@
 <form method="post" class="mt-3">
     <div class="form-group row">
         <label asp-for="MascotaIdMascota" class="form-control">Mascota</label>
-        <select class="form-control" asp-for="MascotaIdMascota" asp-items="@Model.mascota"></select>
+        <select class="form-control" asp-for="MascotaIdMascota" asp-items="@Model.Mascota"></select>
     </div>
     <div class="form-group row">
-        <label asp-for="cedulaVeterinario" class="form-control">Veterinario</label>
-        <select class="form-control" asp-for="cedulaVeterinario" asp-items="@Model.Veterinario"></select>
+        <label asp-for="CedulaVeterinario" class="form-control">Veterinario</label>
+        <select class="form-control" asp-for="CedulaVeterinario" asp-items="@Model.Veterinario"></select>
     </div>
     <div class="form-group row">
         <label asp-for="agenda.Dia" class="col-sm-2">Día</label>

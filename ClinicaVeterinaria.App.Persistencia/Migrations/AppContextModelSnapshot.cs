@@ -30,6 +30,7 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Descripcion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Dia")
@@ -38,12 +39,17 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.Property<DateTime>("Hora")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("MascotaId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("VeterinarioId")
                         .HasColumnType("int");
 
                     b.HasKey("AgendaId");
 
                     b.HasIndex("AuxiliarId");
+
+                    b.HasIndex("MascotaId");
 
                     b.HasIndex("VeterinarioId");
 
@@ -99,9 +105,11 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Consiente")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Observaciones")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PresionArterial")
@@ -111,9 +119,11 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Temperatura")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TipoSangre")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ChequeoId");
@@ -137,12 +147,14 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Gravedad")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("MascotaId")
                         .HasColumnType("int");
 
                     b.Property<string>("Receta")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DiagnosticoId");
@@ -206,18 +218,22 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Color")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Descripción")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Especie")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Nacimiento")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("NombreM")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
@@ -267,15 +283,20 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Nombre")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NumeroTelefono")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Username")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -284,8 +305,7 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .IsUnique();
 
                     b.HasIndex("Username")
-                        .IsUnique()
-                        .HasFilter("[Username] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("Personas");
 
@@ -297,6 +317,7 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.HasBaseType("ClinicaVeterinaria.App.Dominio.Persona");
 
                     b.Property<string>("Especializacion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("EstadoVeterinario")
@@ -306,6 +327,7 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LicenciaProfesional")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("Auxiliar");
@@ -329,6 +351,7 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                     b.HasBaseType("ClinicaVeterinaria.App.Dominio.Persona");
 
                     b.Property<string>("Especializacion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Veterinario_Especializacion");
 
@@ -341,6 +364,7 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .HasColumnName("Veterinario_HorarioLaboral");
 
                     b.Property<string>("LicenciaProfesional")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Veterinario_LicenciaProfesional");
 
@@ -353,11 +377,17 @@ namespace ClinicaVeterinaria.App.Persistencia.Migrations
                         .WithMany()
                         .HasForeignKey("AuxiliarId");
 
+                    b.HasOne("ClinicaVeterinaria.App.Dominio.Mascota", "Mascota")
+                        .WithMany()
+                        .HasForeignKey("MascotaId");
+
                     b.HasOne("ClinicaVeterinaria.App.Dominio.Veterinario", "Veterinario")
                         .WithMany()
                         .HasForeignKey("VeterinarioId");
 
                     b.Navigation("Auxiliar");
+
+                    b.Navigation("Mascota");
 
                     b.Navigation("Veterinario");
                 });

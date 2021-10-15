@@ -28,9 +28,9 @@ namespace ClinicaVeterinaria.App.Persistencia
             }
         }
 
-        public IEnumerable<Agenda> getAgendasPerDay(DateTime dia)
+        public IEnumerable<Agenda> getAgendasPerDay(DateTime Dia)
         {
-            return _appContext.Agendas.Where(c => c.Dia == dia).Include("Mascota").Include("Veterinario");
+            return _appContext.Agendas.Where(c => c.Dia == Dia).Include("Mascota").Include("Veterinario");
         }
 
         public IEnumerable<Agenda> getAllAgendas()
@@ -38,9 +38,9 @@ namespace ClinicaVeterinaria.App.Persistencia
             return _appContext.Agendas.Include("Mascota").Include("Veterianrio");
         }
 
-        public int ReportAgendas(DateTime dia)
+        public int ReportAgendas(DateTime Dia)
         {
-            int report = _appContext.Agendas.Where(c => c.Dia == dia).Count();
+            int report = _appContext.Agendas.Where(c => c.Dia == Dia).Count();
             return report;
         }
     }
