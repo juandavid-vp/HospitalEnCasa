@@ -48,10 +48,16 @@
                                 </form>
                             
                             </ul>
+                                @*
+                                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
+                                asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                                    <button type="button" class="btn btn-success">Logout</button>
+                                </form> *@
                                 <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
                                 asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
                                     <button type="button" class="btn btn-success">Logout</button>
                                 </form>
+
                             }
                             else
                             { 
