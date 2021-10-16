@@ -1,0 +1,33 @@
+﻿@page
+@model ClinicaVeterinaria.App.Frontend.Pages.SeePetModel
+@{
+}
+
+<h2 style="color: green"> TUS MASCOTAS </h4>
+<p align='center'> En está pagina podrás visulizar tus mascotas, tambien tendras la posibilidad de editar los datos si te equivocaste o eliminar alguna de ellas.</p>
+<a class="btn btn-primary table-btn" asp-page="./AddPet">Agregar nueva mascota</a>
+<table class="table table-dark">
+<tr>
+    <th scope="col">Id</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Nacimiento</th>
+    <th scope="col">Color</th>
+    <th scope="col">Peso</th>
+    <th scope="col">Raza</th>
+    
+</tr>
+@foreach(var mascota in Model.mascotas){
+    <tr>
+        <td>@mascota.Id</td>
+        <td>@mascota.NombreM</td>
+        <td>@mascota.Nacimiento</td>
+        <td>@mascota.Color</td>
+        <td>@mascota.Raza</td>
+        
+        @*<td><a class="btn btn-primary table-btn" asp-page="./DetailMedico" asp-route-cedula="@medico.cedula">Detalles</a><br>
+        <a class="btn btn-primary table-btn" asp-page="./EditMedico" asp-route-cedula="@medico.cedula">Editar</a><br>
+        <a class="btn btn-primary table-btn" asp-page="./RemoveMedico" asp-route-cedula="@medico.cedula">Eliminar</a>
+        <br>*@
+    </tr>
+}
+</table>
