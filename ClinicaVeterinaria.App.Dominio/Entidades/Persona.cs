@@ -17,7 +17,7 @@ namespace ClinicaVeterinaria.App.Dominio
         public string NumeroTelefono {get; set;}
         public string CorreoElectronico {get; set;}
        [Required(ErrorMessage = "El nombre de usuario es requerido."),RegularExpression(@"^\S*$", ErrorMessage = "No se permiten espacios")]
-        public string Username { get; set; }
+        public string UserName { get; set; }
        [Required(ErrorMessage = "La contraseña es requerida."),DataType(DataType.Password),StringLength(100,MinimumLength=6,ErrorMessage="La contraseña debe tener entre 6 y 100 carácteres")]
         public string Password { get; set; }
     }

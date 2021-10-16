@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using ClinicaVeterinaria.App.Dominio;
@@ -7,12 +8,17 @@ namespace ClinicaVeterinaria.App.Persistencia
     public class RepositorioVeterinario : IRepositorioVeterinario
     {
         private readonly AppContext _appContext;
+        private readonly Security security;
         public RepositorioVeterinario(AppContext appContext)
         {
             this._appContext = appContext;
+            security = new Security();
         }
         public Veterinario addVeterinarios(Veterinario veterinario)
         {
+            String Password = veterinario.Password;
+            Password = security.GetMD5Hash(Password);
+            veterinario.Password = Password;
             Veterinario newVeterinario = _appContext.Add(veterinario).Entity;
             _appContext.SaveChanges();
             return newVeterinario;
@@ -21,11 +27,14 @@ namespace ClinicaVeterinaria.App.Persistencia
         public Veterinario editVeterinarios(Veterinario veterinario)
         {
             Veterinario veterinarioEncontrado = _appContext.Veterinarios.FirstOrDefault(v => v.Id == veterinario.Id);
+            String Password = veterinario.Password;
+            Password = security.GetMD5Hash(Password);
+            veterinario.Password = Password;
+
             if (veterinarioEncontrado != null)
             {
-                veterinarioEncontrado.Id = veterinario.Id;
                 veterinarioEncontrado.Nombre = veterinario.Nombre;
-               veterinarioEncontrado.FechaNacimiento = veterinario.FechaNacimiento;
+                veterinarioEncontrado.FechaNacimiento = veterinario.FechaNacimiento;
                 veterinarioEncontrado.Cedula = veterinario.Cedula;
                 veterinarioEncontrado.NumeroTelefono= veterinario.NumeroTelefono;
                 veterinarioEncontrado.CorreoElectronico = veterinario.CorreoElectronico;
@@ -33,6 +42,9 @@ namespace ClinicaVeterinaria.App.Persistencia
                 veterinarioEncontrado.LicenciaProfesional = veterinario.LicenciaProfesional;
                 veterinarioEncontrado.Especializacion = veterinario.Especializacion;
                 veterinarioEncontrado.EstadoVeterinario = veterinario.EstadoVeterinario;
+                veterinarioEncontrado.CorreoElectronico = veterinario.CorreoElectronico;
+                veterinarioEncontrado.Password = veterinario.Password;
+                veterinarioEncontrado.UserName = veterinario.UserName;
                 _appContext.SaveChanges();
             }
             return veterinarioEncontrado;

@@ -8,7 +8,7 @@ namespace ClinicaVeterinaria.App.Persistencia
     {
         public String GetMD5Hash(String input)
         {
-            input += "hospital"+input.Reverse(); //Añadir sal a la contraseña
+            input += "Clinica Veterinaria"+input.Reverse(); //Añadir sal a la contraseña
 
             MD5CryptoServiceProvider x = new MD5CryptoServiceProvider();
             byte[] bs = System.Text.Encoding.UTF8.GetBytes(input);
