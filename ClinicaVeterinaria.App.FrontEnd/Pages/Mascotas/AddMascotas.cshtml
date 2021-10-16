@@ -1,9 +1,8 @@
 ﻿@page
-@model ClinicaVeterinaria.App.FrontEnd.Pages.AddMascotasModel
-@using ClinicaVeterinaria.App.Dominio
+@model ClinicaVeterinaria.App.FrontEnd.Pages.ListMascotasModel
 @{
 }
-<h1>Agregar mascota</h1>
+<h2 style="color:green">AGREGAR TUS MASCOTAS</h2>
 <form method="post" class="mt-3"> 
 
     <div class="form-group row">
@@ -18,11 +17,11 @@
     </div>  
     <div class="form-group row">
         <label asp-for="mascota.Peso" class="col-sm-2">Peso</label>
-        <input asp-for="mascota.Peso" class="form-control">
+        <input asp-for="mascota.Peso" class="form-control" >
         <span asp-validation-for="mascota.Peso" class="text-danger"></span>
     </div>  
     <div class="form-group row">
-        <label asp-for="mascota.Raza" class="col-sm-2">Especie</label>
+        <label asp-for="mascota.Raza" class="col-sm-2">Raza</label>
         <input asp-for="mascota.Raza" class="form-control" >
         <span asp-validation-for="mascota.Raza" class="text-danger"></span>
     </div>  

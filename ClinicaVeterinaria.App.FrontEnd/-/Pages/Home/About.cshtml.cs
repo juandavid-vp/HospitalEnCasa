@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ClinicaVeterinaria.App.Frontend.Pages
+namespace ClinicaVeterinaria.App.Frontend
 {
-    public class RegistroModel : PageModel
+    public class AboutModel : PageModel
     {
-        
         public void OnGet()
         {
         }

@@ -73,7 +73,7 @@ namespace ClinicaVeterinaria.App.Frontend
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=conference}/{action=index}/{id?}"
+                    pattern: "{controller=conference}/{action=Index}/{id?}"
                 );
                 endpoints.MapRazorPages();
             });

@@ -1,24 +1,82 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Vet Home</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/784/784152.png" type="imagen/png" >
+    <title>@ViewData["Title"] - VetHome </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <script src="~/jquery/jquery.min.js"></script>
     <script src="~/bootstrap/dist/js/bootstrap.min.js" integrity=""></script>
+
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">CLINICA VETERINARIA</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+    <header>   
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- logo -->
+        <a class="navbar-brand"> <img src="https://cdn-icons-png.flaticon.com/512/3460/3460473.png" type="imagen/png" alt="logo" width="auto" height="30"> MISTIC VETERINARIA </a>
+        
+        
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse"           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"           aria-expanded="false" aria-label="Toggle navigation">    <span class="navbar-toggler-icon"></span>  </button>  
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">    
+                    
+                    
+                    <ul class="navbar-nav text aling: Left">
+                        <form class="form-inline" asp-area="" asp-page="/Home/Bienvenida">
+                            <button class="btn btn-outline-success my-2 my-sm-0 "> HOME </button>
+                        </form>
+                        <form class="form-inline" asp-area="" asp-page="/Home/About">
+                            <button class="btn btn-outline-success my-2 my-sm-0 "> ABOUT US </button>
+                        </form>         
+                    </ul>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                            <!-- Paginas para usuarios que estan registrados -->
+                      
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item"> 
+                                    <button class="btn btn-outline-success my-2 my-sm-0 "> <a href="/Mascotas/AddMascotas" style="color: black"> REGISTRAR TUS MASCOTAS </a></button>
+                                </li>
+                                <li class="nav-item"> 
+                                    <button class="btn btn-outline-success my-2 my-sm-0 "> <a href="/Mascotas/ListMascotas" style="color: black"> VER TUS MASCOTAS </a></button>
+                                </li>
+                                <form class="form-inline" asp-area="" asp-page="/Propietarios/AddOwner">
+                                    <button class="btn btn-outline-success my-2 my-sm-0 "> DATOS </button>
+                                </form>
+                            
+                            </ul>
+                                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout"
+                                asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                                    <button type="button" class="btn btn-success">Logout</button>
+                                </form>
+                            }
+                            else
+                            { 
+                                <ul class="navbar-nav mr-auto">                     
+
+                                <!-- <li class="nav-item dropdown">        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">          Dropdown        </a>  #Desplegable     
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">          
+                                    <a class="dropdown-item" href="/Registrarse/AddOwner">Action</a>          
+                                    <a class="dropdown-item" href="#">Another action</a>          
+                                <div class="dropdown-divider"></div>          <a class="dropdown-item" href="#">Something else here</a>        </div>      
+                                </li>     Desactivado <li class="nav-item">        <a class="nav-link disabled" href="#">Disabled</a>      </li> -->   
+                                </ul>   <!-- Campo de busqueda --> 
+                                <form class="form-inline my-2 "> <!--     
+                                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->    
+                                  <!-- Botones de ingreso --> 
+                                <button class="btn btn-outline-success my-2 my-sm-0 "> <a href="/Identity/Account/Login" style="color:black;"> Ingresar </a> </button>
+                                  
+                                <button class="btn btn-outline-success my-2 my-sm-0"> <a href="/Identity/Account/Register" style="color:black;"> Registrate </a></button>    
+                                </form> 
+                            } 
+                </div>
+        </nav> 
+                
+                
+                <!--<div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area=""asp-page="/Home/Bienvenida">Vet Home</a>
@@ -31,18 +89,15 @@
                         </li>               
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Veterinarios/AddVeterinarios"> About veterinarios </a>
-                        </li>
-                        <li class="nav-item" >
-                            <a href="/Identity/Account/Login" class="btn btn-primary">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Identity/Account/Register" class="btn btn-primary">Registrate</a>
-                        </li>      
-                    </ul>
+                        </li>   
+
+
+                    </ul> 
                 </div>
             </div>
-        </nav>
+        </nav>-->
     </header>
+    
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -51,7 +106,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - ClinicaVeterinaria.App.Frontend - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2021 - CLINICA VETERINARIA developed for -<a asp-area="" asp-page="/Equipo/Members"> TEAM C - MISTIC3 </a>
         </div>
     </footer>
 
